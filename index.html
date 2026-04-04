@@ -1,694 +1,1510 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Bunty Kaka Bhavnagari | Authentic Taste</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        canvas: '#FFFFFF',
-                        surface: '#FAFAFA',
-                        ink: '#000000',
-                        stone: '#71717A',
-                        border: '#E5E5E5'
-                    },
-                    fontFamily: {
-                        serif: ['Playfair Display', 'serif'],
-                        sans: ['Inter', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
-
-    <style>
-        /* --- Core Styles --- */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #FFFFFF;
-            color: #000000;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        h1, h2, h3 { font-family: 'Playfair Display', serif; }
-
-        /* Scrollbar */
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: #FFFFFF; }
-        ::-webkit-scrollbar-thumb { background: #000000; }
-
-        /* Advanced Animations */
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .animate-reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .animate-reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Image Effects */
-        .img-monochrome {
-            filter: grayscale(100%);
-            transition: all 0.7s ease;
-        }
-        .group:hover .img-monochrome {
-            filter: grayscale(0%);
-            transform: scale(1.05);
-        }
-
-        /* Cart Drawer */
-        .cart-drawer {
-            transform: translateX(100%);
-            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .cart-drawer.open { transform: translateX(0); }
-
-        /* Button Hover Effect */
-        .btn-primary {
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-        .btn-primary::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 0; height: 100%;
-            background: #000;
-            z-index: -1;
-            transition: width 0.3s ease;
-        }
-        .btn-primary:hover::before { width: 100%; }
-        .btn-primary:hover { color: #FFF; border-color: #000; }
-
-        /* Hide scrollbar for category slider */
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        
-        /* Input Styling */
-        input, textarea {
-            transition: all 0.3s ease;
-        }
-        input:focus, textarea:focus {
-            border-color: #000 !important;
-            box-shadow: 0 0 0 1px #000;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Physical Pharmacy - Exam Answer Sheet</title>
+<style>
+:root{--bg:#ffffff;--bg2:#f8f9fa;--bg3:#e9ecef;--text:#212529;--text2:#495057;--text3:#6c757d;--accent:#0d6efd;--accent2:#0b5ed7;--border:#dee2e6;--shadow:0 2px 12px rgba(0,0,0,0.07);--shadow2:0 4px 20px rgba(0,0,0,0.1);--card:#ffffff;--highlight:#fff3cd;--highlightBorder:#ffc107;--tipBg:#d1ecf1;--tipBorder:#0c5460;--revBg:#e8f5e9;--revBorder:#2e7d32;--radius:12px;--navH:60px}
+.dark{--bg:#121212;--bg2:#1e1e1e;--bg3:#2d2d2d;--text:#e0e0e0;--text2:#b0b0b0;--text3:#888;--accent:#4dabf7;--accent2:#339af0;--border:#3a3a3a;--shadow:0 2px 12px rgba(0,0,0,0.3);--shadow2:0 4px 20px rgba(0,0,0,0.4);--card:#1e1e1e;--highlight:#3d3500;--highlightBorder:#ffc107;--tipBg:#0c3547;--tipBorder:#4dabf7;--revBg:#1b3a1b;--revBorder:#66bb6a}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;transition:background .3s,color .3s}
+::selection{background:var(--accent);color:#fff}
+.topnav{position:fixed;top:0;left:0;right:0;height:var(--navH);background:var(--card);border-bottom:1px solid var(--border);box-shadow:var(--shadow);display:flex;align-items:center;padding:0 24px;z-index:1000;gap:16px;transition:all .3s}
+.topnav .subject{font-weight:700;font-size:1.05rem;color:var(--accent);white-space:nowrap}
+.topnav .links{display:flex;gap:6px;overflow-x:auto;flex:1;padding:4px 0;scrollbar-width:none}
+.topnav .links::-webkit-scrollbar{display:none}
+.topnav .links a{padding:5px 12px;border-radius:20px;font-size:.8rem;font-weight:600;color:var(--text2);text-decoration:none;white-space:nowrap;border:1px solid transparent;transition:all .2s}
+.topnav .links a:hover,.topnav .links a.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.nav-right{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.search-box{position:relative}
+.search-box input{padding:7px 14px 7px 34px;border:1px solid var(--border);border-radius:20px;font-size:.85rem;background:var(--bg2);color:var(--text);width:180px;transition:all .3s;outline:none}
+.search-box input:focus{width:240px;border-color:var(--accent);box-shadow:0 0 0 3px rgba(13,110,253,.15)}
+.dark .search-box input:focus{box-shadow:0 0 0 3px rgba(77,171,247,.15)}
+.search-box svg{position:absolute;left:10px;top:50%;transform:translateY(-50%);width:16px;height:16px;color:var(--text3)}
+.toggle-btn{width:38px;height:38px;border-radius:50%;border:1px solid var(--border);background:var(--bg2);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;transition:all .2s;color:var(--text)}
+.toggle-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+.main{max-width:860px;margin:0 auto;padding:calc(var(--navH) + 24px) 20px 60px}
+.q-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:20px;overflow:hidden;transition:all .3s}
+.q-card:hover{box-shadow:var(--shadow2)}
+.q-header{padding:16px 20px;display:flex;align-items:center;gap:12px;cursor:pointer;user-select:none;border-bottom:1px solid transparent;transition:all .2s}
+.q-card.open .q-header{border-bottom-color:var(--border);background:var(--bg2)}
+.q-num{background:var(--accent);color:#fff;font-weight:700;font-size:.8rem;padding:5px 12px;border-radius:20px;white-space:nowrap}
+.q-title{font-weight:600;font-size:.95rem;color:var(--text);flex:1}
+.q-marks{font-size:.8rem;color:var(--text3);font-weight:600;background:var(--bg3);padding:3px 10px;border-radius:12px}
+.q-arrow{font-size:.9rem;color:var(--text3);transition:transform .3s}
+.q-card.open .q-arrow{transform:rotate(180deg)}
+.q-body{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.q-card.open .q-body{max-height:none}
+.q-content{padding:20px}
+.q-content p{margin-bottom:10px;color:var(--text2);font-size:.93rem}
+.q-content h4{font-size:1rem;color:var(--text);margin:16px 0 8px;font-weight:700}
+.q-content h5{font-size:.92rem;color:var(--text);margin:12px 0 6px;font-weight:600}
+.q-content ul,.q-content ol{margin:8px 0 12px 20px;color:var(--text2);font-size:.92rem}
+.q-content li{margin-bottom:4px}
+.q-content li strong{color:var(--text)}
+.highlight-box{background:var(--highlight);border-left:4px solid var(--highlightBorder);padding:12px 16px;border-radius:0 8px 8px 0;margin:12px 0;font-size:.9rem;color:var(--text)}
+.exam-tip{background:var(--tipBg);border-left:4px solid var(--tipBorder);padding:12px 16px;border-radius:0 8px 8px 0;margin:12px 0;font-size:.88rem}
+.exam-tip strong{color:var(--tipBorder);display:block;margin-bottom:3px}
+.dark .exam-tip strong{color:var(--accent)}
+.revision-note{background:var(--revBg);border-left:4px solid var(--revBorder);padding:12px 16px;border-radius:0 8px 8px 0;margin:12px 0;font-size:.88rem}
+.revision-note strong{color:var(--revBorder);display:block;margin-bottom:3px}
+.dark .revision-note strong{color:var(--revBorder)}
+.ascii-diagram{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:16px;font-family:'Courier New',monospace;font-size:.82rem;line-height:1.4;overflow-x:auto;margin:12px 0;white-space:pre;color:var(--text2)}
+.eq-block{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px 18px;margin:10px 0;font-size:.93rem;text-align:center;color:var(--text);font-weight:500}
+.copy-btn{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border:1px solid var(--border);border-radius:8px;background:var(--bg2);color:var(--text2);font-size:.8rem;cursor:pointer;transition:all .2s;margin-top:10px;font-weight:500}
+.copy-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+.copy-btn.copied{background:#198754;color:#fff;border-color:#198754}
+.sub-label{display:inline-block;font-size:.78rem;font-weight:700;color:var(--accent);background:rgba(13,110,253,.08);padding:2px 10px;border-radius:10px;margin:10px 0 6px}
+.dark .sub-label{background:rgba(77,171,247,.12)}
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.88rem}
+th,td{border:1px solid var(--border);padding:8px 12px;text-align:left}
+th{background:var(--bg2);font-weight:600;color:var(--text);font-size:.84rem}
+td{color:var(--text2)}
+.no-results{text-align:center;padding:60px 20px;color:var(--text3);font-size:1.1rem;display:none}
+.no-results span{font-size:2.5rem;display:block;margin-bottom:12px}
+.hero{text-align:center;padding:20px 0 10px}
+.hero h1{font-size:1.6rem;font-weight:800;color:var(--text);margin-bottom:4px}
+.hero p{color:var(--text3);font-size:.9rem}
+.expand-all{padding:8px 18px;border:1px solid var(--border);border-radius:8px;background:var(--bg2);color:var(--text2);font-size:.82rem;cursor:pointer;transition:all .2s;font-weight:600}
+.expand-all:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+@media(max-width:768px){
+.topnav{padding:0 12px;gap:8px}
+.topnav .subject{font-size:.9rem}
+.search-box input{width:120px}.search-box input:focus{width:160px}
+.q-header{padding:12px 14px}.q-content{padding:14px}
+.q-title{font-size:.88rem}
+.main{padding:calc(var(--navH) + 16px) 12px 40px}
+.hero h1{font-size:1.3rem}
+}
+@media(max-width:480px){
+.topnav .links a{padding:4px 8px;font-size:.72rem}
+.nav-right{gap:6px}
+.toggle-btn{width:32px;height:32px;font-size:.9rem}
+}
+</style>
 </head>
+<body>
 
-<body class="bg-canvas font-sans text-ink">
+<nav class="topnav">
+<div class="subject">Physical Pharmacy</div>
+<div class="links" id="navLinks">
+<a href="#q1" data-q="q1">Q1</a>
+<a href="#q2" data-q="q2">Q2</a>
+<a href="#q3" data-q="q3">Q3</a>
+<a href="#q4" data-q="q4">Q4</a>
+<a href="#q5" data-q="q5">Q5</a>
+<a href="#q6" data-q="q6">Q6</a>
+<a href="#q7" data-q="q7">Q7</a>
+</div>
+<div class="nav-right">
+<div class="search-box">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+<input type="text" id="searchInput" placeholder="Search questions...">
+</div>
+<button class="toggle-btn" id="darkToggle" title="Toggle Dark Mode">&#9790;</button>
+<button class="expand-all" id="expandAll">Expand All</button>
+</div>
+</nav>
 
-    <!-- NAVIGATION (Fixed & Visible on Mobile) -->
-    <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-border h-auto py-3 sm:py-0 sm:h-20 flex items-center px-4 sm:px-8">
-        <div class="max-w-7xl mx-auto w-full flex justify-between items-center">
-            <!-- Logo & Brand Name -->
-            <a href="#" class="flex items-center gap-3">
-                <!-- Logo Placeholder -->
-                <img src="logo-placeholder.png" alt="Logo" class="h-10 w-auto object-contain" id="nav-logo">
-                
-                <!-- Brand Name: Visible on all screens now -->
-                <div class="block border-l border-black pl-3 ml-1">
-                    <h1 class="font-serif text-base sm:text-xl font-bold tracking-tight leading-none">Bunty Kaka</h1>
-                    <p class="text-[9px] sm:text-xs uppercase tracking-widest text-stone -mt-0.5">Bhavnagari</p>
-                </div>
-            </a>
+<div class="main">
+<div class="hero">
+<h1>Physical Pharmacy - Complete Answer Sheet</h1>
+<p>GTU Exam Preparation | All Questions Covered with Diagrams &amp; Equations</p>
+</div>
 
-            <!-- Desktop Nav Links -->
-            <div class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-wider">
-                <a href="#menu" class="hover:text-stone transition-colors">Menu</a>
-                <a href="#story" class="hover:text-stone transition-colors">Story</a>
-                <a href="#contact" class="hover:text-stone transition-colors">Contact</a>
-            </div>
+<div class="no-results" id="noResults"><span>&#128269;</span>No matching questions found</div>
 
-            <!-- Cart Button -->
-            <button onclick="toggleCart(true)" class="relative group">
-                <div class="flex items-center gap-2 bg-black text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs font-semibold group-hover:bg-white group-hover:text-black group-hover:border-black border border-transparent transition-colors duration-300">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
-                    <span class="hidden sm:inline">Cart</span>
-                    <span id="nav-cart-count" class="bg-white text-black group-hover:bg-black group-hover:text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold transition-colors">0</span>
-                </div>
-            </button>
-        </div>
-    </nav>
+<!-- Q1 -->
+<div class="q-card open" id="q1" data-search="methods determination particle size coulter counter">
+<div class="q-header" onclick="toggleCard(this)">
+<span class="q-num">Q.1</span>
+<span class="q-title">Particle Size Determination Methods &amp; Coulter Counter | Surface Area Methods | Powder Flow</span>
+<span class="q-marks">16 Marks</span>
+<span class="q-arrow">&#9660;</span>
+</div>
+<div class="q-body"><div class="q-content" id="ans-q1">
 
-    <!-- HERO SECTION -->
-    <section class="pt-28 sm:pt-32 pb-12 sm:pb-20 px-4 sm:px-8 relative overflow-hidden">
-        <!-- Decorative Elements -->
-        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-surface to-transparent hidden lg:block"></div>
-        <div class="absolute top-40 left-0 w-32 h-32 border border-border rounded-full opacity-50"></div>
+<div class="sub-label">(a) Methods for Determination of Particle Size &amp; Coulter Counter Method [06 Marks]</div>
 
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10">
-            <div class="text-center lg:text-left order-2 lg:order-1">
-                <span class="inline-block text-[10px] sm:text-xs font-bold uppercase tracking-[0.3em] text-stone mb-4 animate-reveal">Est. 2009 • Authentic Taste</span>
-                <h1 class="text-4xl sm:text-5xl lg:text-7xl font-serif font-bold leading-none mb-6 tracking-tight animate-reveal" style="animation-delay: 100ms">
-                    The Legend of<br>
-                    <span class="italic">Bateta Bhungla</span>
-                </h1>
-                <p class="text-stone text-base sm:text-lg max-w-lg mx-auto lg:mx-0 mb-8 leading-relaxed animate-reveal" style="animation-delay: 200ms">
-                    Experience the legendary street food crafted with love, tradition, and the perfect blend of spices.
-                </p>
-                
-                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-reveal" style="animation-delay: 300ms">
-                    <a href="#menu" class="bg-black text-white px-8 py-3.5 rounded-full text-xs sm:text-sm font-semibold shadow-xl hover:shadow-2xl transition-all">
-                        Order Now
-                    </a>
-                    <a href="#story" class="bg-white text-black px-8 py-3.5 rounded-full text-xs sm:text-sm font-semibold border border-black hover:bg-black hover:text-white transition-colors">
-                        Our Story
-                    </a>
-                </div>
-            </div>
+<h4>Methods for Determination of Particle Size:</h4>
+<ol>
+<li><strong>Microscopy Method (Optical &amp; Electron)</strong> &ndash; Direct measurement of particle dimensions; useful for range 0.2&ndash;100 &mu;m.</li>
+<li><strong>Sieving Method</strong> &ndash; Uses standard sieves arranged in descending order; range 20&ndash;125,000 &mu;m.</li>
+<li><strong>Sedimentation Method (Andreasen Pipette)</strong> &ndash; Based on Stokes' law; range 1&ndash;200 &mu;m.</li>
+<li><strong>Coulter Counter Method</strong> &ndash; Electrical sensing zone principle; range 0.5&ndash;500 &mu;m.</li>
+<li><strong>Laser Diffraction Method</strong> &ndash; Based on Fraunhofer diffraction; range 0.1&ndash;3000 &mu;m.</li>
+<li><strong>Dynamic Light Scattering (Photon Correlation Spectroscopy)</strong> &ndash; For submicron particles; range 0.003&ndash;3 &mu;m.</li>
+<li><strong>Air Permeability Method</strong> &ndash; Gives specific surface area; indirect size measurement.</li>
+</ol>
 
-            <div class="order-1 lg:order-2 relative h-[300px] sm:h-[400px] lg:h-[600px] animate-reveal" style="animation-delay: 200ms">
-                <div class="absolute inset-0 bg-surface rounded-[2rem] transform rotate-3 scale-95"></div>
-                <!-- Hero Image -->
-                <img src="hero-food-placeholder.png" alt="Hero Food" class="relative z-10 w-full h-full object-contain p-4 sm:p-8 drop-shadow-2xl" id="hero-img">
-            </div>
-        </div>
-    </section>
+<h4>Coulter Counter Method &ndash; Detailed Explanation:</h4>
 
-    <!-- MENU SECTION -->
-    <section id="menu" class="py-12 sm:py-20 px-4 sm:px-8 bg-surface border-t border-border">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 sm:mb-12 gap-4">
-                <div class="text-center md:text-left w-full md:w-auto">
-                    <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-stone">Our Selection</span>
-                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-serif mt-2">The Menu</h2>
-                </div>
+<p><strong>Principle:</strong> The Coulter counter works on the principle of <strong>electrical sensing zone</strong> (also called the resistive pulse sensing technique). When a particle suspended in an electrolyte solution passes through a small aperture (orifice), it displaces its own volume of electrolyte, causing a momentary change in electrical resistance. This change in resistance produces a voltage pulse whose magnitude is proportional to the volume of the particle.</p>
 
-                <!-- Filters -->
-                <div class="flex gap-2 overflow-x-auto no-scrollbar w-full md:w-auto pb-2 md:pb-0">
-                    <button onclick="filterMenu('all')" class="filter-btn active bg-black text-white px-5 py-2 rounded-full text-xs font-semibold border border-black whitespace-nowrap transition-all" data-cat="all">All</button>
-                    <button onclick="filterMenu('bhungla')" class="filter-btn bg-white text-black px-5 py-2 rounded-full text-xs font-semibold border border-border hover:border-black whitespace-nowrap transition-all" data-cat="bhungla">Bhungla</button>
-                    <button onclick="filterMenu('snacks')" class="filter-btn bg-white text-black px-5 py-2 rounded-full text-xs font-semibold border border-border hover:border-black whitespace-nowrap transition-all" data-cat="snacks">Snacks</button>
-                    <button onclick="filterMenu('drinks')" class="filter-btn bg-white text-black px-5 py-2 rounded-full text-xs font-semibold border border-border hover:border-black whitespace-nowrap transition-all" data-cat="drinks">Drinks</button>
-                </div>
-            </div>
+<div class="highlight-box">
+<strong>Key Principle:</strong> The change in resistance (&Delta;R) is directly proportional to particle volume (V): &Delta;R &prop; V &nbsp;&rarr;&nbsp; Particle diameter can be calculated assuming spherical shape.
+</div>
 
-            <!-- Grid -->
-            <div id="menu-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                <!-- Rendered by JS -->
-            </div>
-        </div>
-    </section>
+<h5>Construction &amp; Working:</h5>
 
-    <!-- STORY SECTION -->
-    <section id="story" class="py-12 sm:py-24 px-4 sm:px-8 bg-white border-t border-border">
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-            <div class="relative animate-reveal">
-                <div class="absolute -inset-2 bg-surface rounded-3xl transform -rotate-2 z-0"></div>
-                <!-- Founder Image -->
-                <img src="founder-placeholder.png" alt="Founder" class="relative w-full h-[350px] sm:h-[500px] object-cover rounded-2xl z-10 grayscale hover:grayscale-0 transition-all duration-700 shadow-lg" id="founder-img">
-            </div>
-            
-            <div class="text-center lg:text-left">
-                <span class="text-xs font-bold uppercase tracking-widest text-stone">The Legacy</span>
-                <h2 class="text-2xl sm:text-3xl md:text-4xl font-serif mt-2 mb-6">A Story of <span class="italic">Passion</span></h2>
-                
-                <div class="space-y-4 text-stone text-sm sm:text-base leading-relaxed">
-                    <p>In the vibrant lanes of Bhavnagar, Bunty Kaka transformed a simple street cart into a culinary landmark. It wasn't just about food; it was about creating an experience.</p>
-                    <p>Today, every plate serves a memory—carefully curated with secret spices and decades of expertise.</p>
-                </div>
+<div class="ascii-diagram">
+    ┌──────────────────────────────────────────────────┐
+    │                  COULTER COUNTER                 │
+    │                                                  │
+    │   ┌─────────┐          ┌─────────────┐           │
+    │   │ Glass   │  Orifice │  Glass      │           │
+    │   │ Chamber │ &#9679;────&#9679;│  Chamber    │           │
+    │   │ (Anode) │  (0.05-  │  (Cathode)  │           │
+    │   │         │   2mm)   │             │           │
+    │   │  +      │  &#8595;     │      -      │           │
+    │   │  └──────┘   &#8595;     └──────┬──────┘           │
+    │   │             &#8595;            │                  │
+    │   │        Particle          Amplifier               │
+    │   │        Suspension         │                      │
+    │   │            │          ┌───┴───┐                  │
+    │   └────────────┘          │ Size  │                  │
+    │                           │Analyzer│                  │
+    │        Mercury            └───┬───┘                  │
+    │        Manometer              │                      │
+    │                           ┌───┴───┐                  │
+    │                           │Counter│                  │
+    │                           │/Plotter│                  │
+    │                           └───────┘                  │
+    └──────────────────────────────────────────────────┘
+</div>
 
-                <div class="flex justify-center lg:justify-start gap-8 sm:gap-12 mt-8 pt-8 border-t border-border">
-                    <div>
-                        <p class="text-2xl sm:text-3xl font-serif font-bold">15+</p>
-                        <p class="text-xs text-stone uppercase">Years</p>
-                    </div>
-                    <div>
-                        <p class="text-2xl sm:text-3xl font-serif font-bold">50K+</p>
-                        <p class="text-xs text-stone uppercase">Customers</p>
-                    </div>
-                    <div>
-                        <p class="text-2xl sm:text-3xl font-serif font-bold">5</p>
-                        <p class="text-xs text-stone uppercase">Spice Levels</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<p><strong>Components:</strong></p>
+<ul>
+<li><strong>Two glass chambers:</strong> Separated by a glass tube with a precise circular orifice (aperture) of known diameter (typically 0.05&ndash;2 mm).</li>
+<li><strong>Electrolyte solution:</strong> Usually 0.9% NaCl or other conductive solution in which particles are suspended.</li>
+<li><strong>Electrodes:</strong> Platinum electrode in each chamber connected to a constant current source.</li>
+<li><strong>Mercury manometer:</strong> Controls the flow of suspension through the aperture by applying vacuum.</li>
+<li><strong>Amplifier &amp; Pulse Analyzer:</strong> Amplifies the voltage pulse and converts pulse height to particle size.</li>
+<li><strong>Counter/Recorder:</strong> Counts and records number of particles in each size class.</li>
+</ul>
 
-    <!-- FOOTER -->
-    <footer id="contact" class="bg-black text-white py-12 sm:py-16 px-4 sm:px-6">
-        <div class="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-8 border-b border-white/10 pb-8">
-            <div class="col-span-full sm:col-span-1 text-center sm:text-left">
-                <h3 class="font-serif text-xl sm:text-2xl mb-4">Bunty Kaka <span class="italic">Bhavnagari</span></h3>
-                <p class="text-white/60 text-sm max-w-xs mx-auto sm:mx-0">Authentic street food experience crafted with purity and tradition.</p>
-            </div>
-            
-            <div class="text-center sm:text-left">
-                <h4 class="text-xs font-bold uppercase tracking-wider mb-4 text-white/40">Hours</h4>
-                <p class="text-white/80 text-sm">Daily: 05:30 PM - 11:00 PM</p>
-                <div class="flex items-center gap-2 mt-2 justify-center sm:justify-start">
-                    <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-                    <span class="text-green-400 text-xs font-semibold">Open Now</span>
-                </div>
-            </div>
+<p><strong>Working Procedure:</strong></p>
+<ol>
+<li>The electrolyte solution is placed in both chambers, and the system is checked for baseline stability.</li>
+<li>A well-dispersed sample of powder is added to the internal (anode) chamber and sonicated to break agglomerates.</li>
+<li>A vacuum is applied through the mercury manometer, causing suspension to flow through the orifice.</li>
+<li>As each particle passes through the aperture, it displaces electrolyte, increasing resistance momentarily.</li>
+<li>This produces a voltage pulse whose <strong>height is proportional to particle volume</strong>.</li>
+<li>Pulses are counted and classified by size using a multichannel analyzer.</li>
+<li>Size distribution is plotted as number vs. equivalent spherical diameter.</li>
+</ol>
 
-            <div class="text-center sm:text-left">
-                <h4 class="text-xs font-bold uppercase tracking-wider mb-4 text-white/40">Contact</h4>
-                <a href="tel:+919824847345" class="block text-white/80 hover:text-white text-sm mb-2">+91 98248 47345</a>
-                <a href="mailto:buntykaka.bhavnagari@gmail.com" class="block text-white/80 hover:text-white text-sm">Email Us</a>
-            </div>
+<p><strong>Equivalent Diameter:</strong> The Coulter counter measures the <strong>volume-equivalent diameter</strong> (d<sub>v</sub>):</p>
+<div class="eq-block">d<sub>v</sub> = (6V / &pi;)<sup>1/3</sup></div>
 
-            <div class="text-center sm:text-left">
-                <h4 class="text-xs font-bold uppercase tracking-wider mb-4 text-white/40">Location</h4>
-                <a href="https://maps.app.goo.gl/TRxf49KJaL5XdeRQ7" target="_blank" class="inline-block bg-white/10 hover:bg-white hover:text-black px-4 py-2 rounded-lg text-xs font-semibold transition-colors">
-                    Get Directions
-                </a>
-                <div class="flex gap-3 mt-4 justify-center sm:justify-start">
-                    <a href="https://youtube.com/@buntykaka.bhavnagari" target="_blank" class="text-white/40 hover:text-white text-xl transition-colors"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
-                    <a href="https://www.instagram.com/bunty_kaka_bhavnagari" target="_blank" class="text-white/40 hover:text-white text-xl transition-colors"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
-                </div>
-            </div>
-        </div>
-        <div class="pt-8 text-center text-xs text-white/20">FSSAI Lic: 20724037001123 • © 2024 Bunty Kaka Bhavnagari</div>
-    </footer>
+<p>where V = particle volume.</p>
 
-    <!-- MOBILE BOTTOM BAR -->
-    <div id="mobile-bar" class="fixed bottom-4 left-4 right-4 z-40 hidden md:hidden">
-        <button onclick="toggleCart(true)" class="w-full bg-black text-white py-4 rounded-2xl flex justify-between items-center px-6 shadow-2xl backdrop-blur-sm border border-white/10">
-            <div class="flex items-center gap-3">
-                <div class="bg-white text-black text-xs w-6 h-6 rounded-full flex items-center justify-center font-bold" id="m-count">0</div>
-                <span class="text-sm font-semibold">View Cart</span>
-            </div>
-            <span class="font-bold" id="m-total">₹0</span>
-        </button>
-    </div>
+<h5>Advantages:</h5>
+<ul>
+<li>Rapid, accurate, and highly reproducible</li>
+<li>Number distribution obtained directly</li>
+<li>Can analyze thousands of particles per second</li>
+<li>Insensitive to particle optical properties</li>
+</ul>
+<h5>Limitations:</h5>
+<ul>
+<li>Requires particles suspended in electrolyte (not suitable for all materials)</li>
+<li>Aperture can be blocked by large particles</li>
+<li>Assumes spherical particles</li>
+<li>Cannot distinguish between solid and hollow particles</li>
+</ul>
 
-    <!-- CART DRAWER -->
-    <div id="cart-overlay" class="fixed inset-0 bg-black/30 z-40 opacity-0 pointer-events-none transition-opacity duration-300 backdrop-blur-sm" onclick="toggleCart(false)"></div>
+<div class="exam-tip">
+<strong>&#128161; Exam Tip:</strong> Always draw the Coulter counter diagram with two chambers, orifice, electrodes, and mercury manometer. Mention that it gives volume-equivalent diameter and the principle is "displacement of electrolyte causing change in resistance."
+</div>
+
+<div class="sub-label">(b) Methods for Determination of Particle Surface Area [05 Marks]</div>
+
+<h4>1. Air Permeability Method (Lea &amp; Nurse Method / Fisher Sub-Sieve Sizer)</h4>
+
+<p><strong>Principle:</strong> Based on the <strong>Kozeny-Carman equation</strong>. When air is passed through a packed bed of powder, the resistance to airflow depends on the specific surface area of the particles. Finer particles create more resistance (higher pressure drop) due to greater total surface area.</p>
+
+<p><strong>Kozeny-Carman Equation:</strong></p>
+<div class="eq-block">S<sub>0</sub> = [14 &times; &epsilon; / (1 &minus; &epsilon;)] &times; [&radic;(&Delta;P &times; A &times; t / (&eta; &times; L &times; m))]</div>
+
+<p>Where:</p>
+<ul>
+<li>S<sub>0</sub> = Specific surface area (cm&sup2;/g)</li>
+<li>&epsilon; = Porosity (void fraction) of the powder bed</li>
+<li>&Delta;P = Pressure drop across the bed</li>
+<li>A = Cross-sectional area of the bed</li>
+<li>t = Time for air flow</li>
+<li>&eta; = Viscosity of air</li>
+<li>L = Bed length (height)</li>
+<li>m = Mass of powder</li>
+</ul>
+
+<p><strong>Procedure:</strong> Powder is packed into a cylindrical cell to a known porosity. Air is drawn through the bed at constant pressure, and the flow rate is measured using a manometer. The specific surface area is calculated using the Kozeny-Carman equation.</p>
+
+<p><strong>Fisher Sub-Sieve Sizer:</strong> A commercial instrument based on this principle; directly reads the average particle diameter from a calibrated chart after measuring pressure drop.</p>
+
+<div class="highlight-box">
+<strong>Important:</strong> This method gives <strong>surface-weighted</strong> (Sauter mean) diameter. Range: 0.2&ndash;50 &mu;m. It is suitable for dry powders only.
+</div>
+
+<h4>2. BET Adsorption Method (Nitrogen Adsorption)</h4>
+
+<p><strong>Principle:</strong> Based on the <strong>Brunauer-Emmett-Teller (BET) theory</strong> of multilayer gas adsorption. An inert gas (usually nitrogen) is adsorbed on the particle surface at liquid nitrogen temperature (&minus;196&deg;C). The amount of gas adsorbed at various pressures is measured, and from this, the total surface area is calculated.</p>
+
+<p><strong>BET Equation:</strong></p>
+<div class="eq-block">P / [V(P<sub>0</sub> &minus; P)] = (1 / V<sub>m</sub>C) + [(C &minus; 1) / V<sub>m</sub>C] &times; (P / P<sub>0</sub>)</div>
+
+<p>Where:</p>
+<ul>
+<li>P = Equilibrium pressure of gas</li>
+<li>P<sub>0</sub> = Saturation pressure of gas at the adsorption temperature</li>
+<li>V = Volume of gas adsorbed at pressure P</li>
+<li>V<sub>m</sub> = Volume of gas required to form a monolayer</li>
+<li>C = BET constant related to heat of adsorption</li>
+</ul>
+
+<p><strong>Calculation of Surface Area:</strong></p>
+<div class="eq-block">S<sub>BET</sub> = (V<sub>m</sub> &times; N<sub>A</sub> &times; &sigma;) / M</div>
+
+<p>Where:</p>
+<ul>
+<li>N<sub>A</sub> = Avogadro's number (6.022 &times; 10<sup>23</sup>)</li>
+<li>&sigma; = Cross-sectional area of one adsorbate molecule (N<sub>2</sub>: 0.162 nm&sup2;)</li>
+<li>M = Molar volume of gas at STP (22,414 cm&sup3;/mol)</li>
+</ul>
+
+<p><strong>Procedure:</strong> A known mass of powder is degassed under vacuum to remove adsorbed moisture/gases. The sample is cooled to liquid N<sub>2</sub> temperature, and nitrogen gas is introduced incrementally. Adsorption isotherm is plotted (P/P<sub>0</sub> vs. V), and BET equation is applied in the relative pressure range of 0.05&ndash;0.35.</p>
+
+<div class="revision-note">
+<strong>&#128218; Short Revision Note:</strong> Air permeability = dry method, Kozeny-Carman equation, gives external surface area. BET adsorption = wet method, uses nitrogen gas at &minus;196&deg;C, gives total (internal + external) surface area. BET is more accurate for porous materials.
+</div>
+
+<div class="sub-label">(c) Factors Affecting Powder Flow &amp; Methods to Improve [05 Marks]</div>
+
+<h4>Factors Affecting Powder Flow:</h4>
+
+<p><strong>A. Particle-Related Factors:</strong></p>
+<ol>
+<li><strong>Particle Size:</strong> Smaller particles have greater surface area, more interparticulate friction, and cohesive forces (van der Waals), leading to poor flow. Optimum size: 40&ndash;200 &mu;m.</li>
+<li><strong>Particle Size Distribution:</strong> Wide distribution improves flow (fine particles fill voids between coarse); narrow distribution leads to poor packing and flow.</li>
+<li><strong>Particle Shape:</strong> Spherical particles flow best (least interlocking). Angular, needle-shaped, or plate-like particles have poor flow.</li>
+<li><strong>Surface Texture:</strong> Smooth surfaces reduce friction &rarr; better flow. Rough surfaces increase mechanical interlocking &rarr; poor flow.</li>
+<li><strong>Surface Moisture:</strong> Moisture acts as a bridge between particles, increasing cohesion and reducing flow.</li>
+</ol>
+
+<p><strong>B. Bulk-Related Factors:</strong></p>
+<ol start="6">
+<li><strong>Porosity &amp; Bulk Density:</strong> Higher bulk density (less porosity) generally indicates better flow.</li>
+<li><strong>Particle Porosity:</strong> Highly porous particles are lighter and may flow poorly.</li>
+</ol>
+
+<p><strong>C. Environmental Factors:</strong></p>
+<ol start="8">
+<li><strong>Humidity:</strong> High humidity increases moisture adsorption &rarr; poor flow.</li>
+<li><strong>Temperature:</strong> Elevated temperature can cause softening, caking, or increased moisture effects.</li>
+</ol>
+
+<p><strong>D. Processing Factors:</strong></p>
+<ol start="10">
+<li><strong>Consolidation/Storage Time:</strong> Prolonged storage under pressure increases cohesion (caking).</li>
+<li><strong>Electrostatic Charge:</strong> Charged particles repel or attract, disrupting uniform flow.</li>
+</ol>
+
+<h4>Methods to Improve Powder Flow:</h4>
+
+<ol>
+<li><strong>Glidants:</strong> Addition of glidants such as colloidal silicon dioxide (Aerosil 200), talc, or magnesium stearate (0.1&ndash;2%) reduces interparticulate friction.</li>
+<li><strong>Granulation:</strong> Wet or dry granulation converts fine powder into larger, free-flowing granules.</li>
+<li><strong>Particle Size Enlargement:</strong> Spray drying, spheronization, or co-crystallization to produce spherical agglomerates.</li>
+<li><strong>Moisture Control:</strong> Proper drying of powder and storage in controlled humidity conditions.</li>
+<li><strong>Vibration/Agitation:</strong> Mechanical vibration in hoppers to overcome arching and ratholing.</li>
+<li><strong>Flow Aids in Equipment:</strong> Using hopper designs with steeper angles, vibration devices, or air-assisted discharge.</li>
+<li><strong>Surface Modification:</strong> Coating particles with hydrophobic materials to reduce moisture sensitivity.</li>
+<li><strong>Optimization of Size Distribution:</strong> Adding fines to coarse particles (or vice versa) to achieve optimal packing.</li>
+</ol>
+
+<div class="exam-tip">
+<strong>&#128161; Exam Tip:</strong> Remember the order: <strong>Size &gt; Shape &gt; Moisture &gt; Distribution</strong> are the most important factors. For improvement: <strong>Glidants &gt; Granulation &gt; Moisture control</strong> are most frequently used in practice.
+</div>
+
+</div></div>
+</div>
+
+<!-- Q2 -->
+<div class="q-card" id="q2" data-search="viscometers classification non-newtonian thixotropy antithixotropy viscosity">
+<div class="q-header" onclick="toggleCard(this)">
+<span class="q-num">Q.2</span>
+<span class="q-title">Viscometers | Thixotropy &amp; Antithixotropy | Newtonian &amp; Non-Newtonian Systems</span>
+<span class="q-marks">16 Marks</span>
+<span class="q-arrow">&#9660;</span>
+</div>
+<div class="q-body"><div class="q-content" id="ans-q2">
+
+<div class="sub-label">(a) Classification of Viscometers &amp; Two Viscometers for Non-Newtonian Fluids [06 Marks]</div>
+
+<h4>Classification of Viscometers:</h4>
+
+<ol>
+<li><strong>Capillary Viscometers</strong> &ndash; Ostwald, Ubbelohde, Cannon-Fenske (based on Poiseuille's law)</li>
+<li><strong>Rotational Viscometers</strong> &ndash;
+  <ul>
+  <li>Spindle type: Brookfield viscometer</li>
+  <li>Couette type (Concentric cylinder): Cup and bob viscometer</li>
+  <li>Cone and plate viscometer</li>
+  </ul>
+</li>
+<li><strong>Falling Sphere/Body Viscometers</strong> &ndash; Hoeppler falling ball viscometer</li>
+<li><strong>Orifice/Flow Cup Viscometers</strong> &ndash; Redwood, Saybolt, Ford cup viscometers</li>
+<li><strong>Vibrational Viscometers</strong> &ndash; Ultrasonic viscometers</li>
+</ol>
+
+<h4>1. Brookfield Viscometer (Spindle Type Rotational Viscometer)</h4>
+
+<p><strong>Principle:</strong> A spindle (rotor) of specific geometry is immersed in the test fluid and rotated at a defined speed (RPM). The viscous drag (torque) exerted by the fluid on the spindle is measured by a calibrated spring. The torque is directly related to the viscosity of the fluid.</p>
+
+<div class="ascii-diagram">
+         ┌────────────┐
+         │  Dial/     │
+         │  Display   │
+         ├────────────┤
+         │  Motor &   │
+         │  Spring    │
+         ├──────┬─────┤
+                │
+                │ Shaft
+                │
+           ┌────┴────┐
+           │ Spindle │  (Various shapes: disc,
+           │ (Rotor) │   cylindrical, T-bar)
+           └────┬────┘
+                │
+         ┌──────┴──────┐
+         │   Sample    │
+         │   Beaker    │
+         └─────────────┘
+</div>
+
+<p><strong>Working:</strong></p>
+<ul>
+<li>Select appropriate spindle (LV series for low viscosity, RV for medium, HV for high viscosity).</li>
+<li>Immerse spindle to the marked depth in the sample.</li>
+<li>Set RPM (0.3, 0.6, 1.5, 3, 6, 12, 30, 60 RPM).</li>
+<li>The motor rotates the spindle; the torque produced is read on the dial/digital display.</li>
+<li>Viscosity = Dial reading &times; Spindle factor &times; Speed factor (in cP).</li>
+</ul>
+
+<p><strong>Suitability for Non-Newtonian Fluids:</strong> By varying the RPM (shear rate), the apparent viscosity at different shear rates can be measured, allowing characterization of pseudoplastic, dilatant, and thixotropic behavior. A flow curve (shear stress vs. shear rate) can be constructed.</p>
+
+<h4>2. Cone and Plate Viscometer</h4>
+
+<p><strong>Principle:</strong> A flat plate and a cone (with a very small angle, typically 0.5&deg;&ndash;4&deg;) are used. The sample is placed between the cone and plate. The cone is rotated, and the torque is measured. The geometry ensures <strong>uniform shear rate</strong> throughout the sample.</p>
+
+<div class="ascii-diagram">
+                    ╱│╲
+                  ╱  │  ╲          Cone (rotating)
+                ╱    │    ╲        Angle &theta; = 0.5&deg;-4&deg;
+              ╱______│______╲
+             ╲       │       ╱    Sample fills the gap
+              ╲──────│──────╱
+         ────────────┴───────────  Flat Plate (stationary)
+</div>
+
+<p><strong>Shear Rate:</strong></p>
+<div class="eq-block">&gamma;&#775; = &omega; / tan &theta;</div>
+<p>Where &omega; = angular velocity, &theta; = cone angle. Since &theta; is small, shear rate is nearly uniform across the gap.</p>
+
+<p><strong>Viscosity:</strong></p>
+<div class="eq-block">&eta; = (3T) / (2&pi;R&sup3;&omega;)</div>
+<p>Where T = torque, R = cone radius.</p>
+
+<p><strong>Advantages for Non-Newtonian Fluids:</strong></p>
+<ul>
+<li>Uniform shear rate &rarr; accurate rheological data</li>
+<li>Small sample volume required (~0.5&ndash;2 mL)</li>
+<li>Excellent for thixotropic studies (hysteresis loop measurement)</li>
+<li>Temperature control is easy (Peltier plate)</li>
+</ul>
+
+<div class="exam-tip">
+<strong>&#128161; Exam Tip:</strong> For Non-Newtonian fluids, rotational viscometers are preferred because they operate at defined shear rates. Capillary viscometers assume Newtonian behavior. Always mention that cone-and-plate gives uniform shear rate.
+</div>
+
+<div class="sub-label">(b) Thixotropy and Antithixotropy [05 Marks]</div>
+
+<h4>Thixotropy:</h4>
+<p><strong>Definition:</strong> Thixotropy is a <strong>time-dependent shear thinning</strong> property. When a thixotropic material is subjected to shear, its viscosity decreases over time. When shear is removed, the viscosity gradually recovers over time as the structure rebuilds.</p>
+
+<p><strong>Mechanism:</strong> Thixotropic materials possess a three-dimensional structural network (formed by weak bonds &ndash; van der Waals forces, hydrogen bonds) at rest. Under shear, this network is progressively broken down, reducing viscosity. Upon resting, the network slowly reforms.</p>
+
+<p><strong>Examples:</strong> Gels (bentonite, carbopol), certain paints, ketchup, some pharmaceutical gels and suspensions.</p>
+
+<h4>Antithixotropy (Rheopexy):</h4>
+<p><strong>Definition:</strong> Antithixotropy is a <strong>time-dependent shear thickening</strong> property. Under constant shear, the viscosity increases over time. When shear is removed, viscosity gradually decreases back.</p>
+
+<p><strong>Mechanism:</strong> Under shear, particles align or form new structural interactions that increase resistance to flow. The structure becomes stronger with continued shear.</p>
+
+<p><strong>Examples:</strong> Concentrated starch suspensions, some PVC plastisols, certain colloidal iron oxide suspensions.</p>
+
+<h5>Thixotropic Curve (Hysteresis Loop):</h5>
+<div class="ascii-diagram">
+  Shear Stress (&tau;)
+       │
+       │      ╭───╮  &darr; Up curve
+       │     ╱     ╲     (Increasing shear rate)
+       │    ╱       ╲
+       │   ╱         ╲
+       │  ╱           ╲  &uarr; Down curve
+       │ ╱             ╲   (Decreasing shear rate)
+       │╱               ╲
+       └──────────────────── Shear Rate (&gamma;&#775;)
+       
+  Thixotropic: Up curve is ABOVE Down curve
+  Area of loop = Degree of thixotropy
+</div>
+
+<h5>Antithixotropic Curve:</h5>
+<div class="ascii-diagram">
+  Shear Stress (&tau;)
+       │
+       │  ╲               ╱
+       │   ╲             ╱  &darr; Up curve (below)
+       │    ╲           ╱
+       │     ╲         ╱
+       │      ╲       ╱
+       │       ╲     ╱   &uarr; Down curve (above)
+       │        ╰───╯
+       └──────────────────── Shear Rate (&gamma;&#775;)
+       
+  Antithixotropic: Up curve is BELOW Down curve
+</div>
+
+<div class="highlight-box">
+<strong>Key Difference:</strong> Thixotropy = breakdown of structure on shear (loop area above); Antithixotropy = buildup of structure on shear (loop area below). Thixotropy is far more common in pharmaceuticals.
+</div>
+
+<div class="sub-label">(c) Viscosity &ndash; Newtonian and Non-Newtonian Systems [05 Marks]</div>
+
+<h4>Definition of Viscosity:</h4>
+<p><strong>Viscosity (&eta;)</strong> is defined as the <strong>internal resistance of a fluid to flow</strong>. It is the ratio of shear stress to shear rate.</p>
+<div class="eq-block">&eta; = &tau; / &gamma;&#775;</div>
+<p>Where: &tau; = shear stress (force/area, dynes/cm&sup2; or Pa), &gamma;&#775; = shear rate (s<sup>&minus;1</sup>)</p>
+<p><strong>Unit:</strong> Poise (P) or Pascal-second (Pa&middot;s); 1 Pa&middot;s = 10 P; commonly expressed in centipoise (cP); 1 cP = water viscosity at 20&deg;C.</p>
+
+<h4>Newtonian Systems:</h4>
+<ul>
+<li>Obey <strong>Newton's law of viscosity</strong>: &tau; = &eta; &times; &gamma;&#775;</li>
+<li>Viscosity is <strong>constant</strong> regardless of shear rate</li>
+<li>Flow curve is a <strong>straight line</strong> passing through origin</li>
+<li>Examples: Water, simple syrups, mineral oil, glycerin, true solutions</li>
+</ul>
+
+<h4>Non-Newtonian Systems:</h4>
+<p>Do NOT obey Newton's law. Viscosity changes with shear rate. Classified as:</p>
+
+<table>
+<tr><th>Type</th><th>Behavior</th><th>Flow Curve</th><th>Examples</th></tr>
+<tr><td><strong>Pseudoplastic</strong> (Shear thinning)</td><td>Viscosity &darr; with &uarr; shear rate</td><td>Curve concave to &tau; axis</td><td>Polymer solutions, cellulose derivatives, natural gums</td></tr>
+<tr><td><strong>Dilatant</strong> (Shear thickening)</td><td>Viscosity &uarr; with &uarr; shear rate</td><td>Curve concave to &gamma;&#775; axis</td><td>Concentrated starch suspensions, wet sand</td></tr>
+<tr><td><strong>Plastic</strong> (Bingham body)</td><td>Must overcome yield value (&tau;<sub>y</sub>) before flow</td><td>Straight line not through origin</td><td>Toothpaste, ointments, ZnO suspension</td></tr>
+<tr><td><strong>Thixotropic</strong></td><td>Time-dependent shear thinning</td><td>Hysteresis loop</td><td>Gels, bentonite magma</td></tr>
+</table>
+
+<div class="ascii-diagram">
+  Shear Stress (&tau;)
+       │           / Pseudoplastic
+       │          /
+       │         /    ╱ Dilatant
+       │        /   ╱
+       │       /  ╱
+       │      / ╱  ------- Plastic (Bingham)
+       │     /╱    │
+       │    ╱      │
+       │   ╱       │&tau;<sub>y</sub> (Yield value)
+       │  ╱________│__________ Newtonian
+       └──────────────────── Shear Rate (&gamma;&#775;)
+</div>
+
+<div class="revision-note">
+<strong>&#128218; Short Revision Note:</strong> Newtonian = straight line through origin, constant viscosity. Pseudoplastic = most common in pharma (polymers). Plastic = has yield value (toothpaste). Dilatant = rare in pharma (starch). Thixotropic = time-dependent pseudoplastic.
+</div>
+
+</div></div>
+</div>
+
+<!-- Q3 -->
+<div class="q-card" id="q3" data-search="compaction compression kawakita heckle angle repose carr index hausner ratio">
+<div class="q-header" onclick="toggleCard(this)">
+<span class="q-num">Q.3</span>
+<span class="q-title">Compaction &amp; Compression Theory | Kawakita &amp; Heckle Equations | Flow Properties</span>
+<span class="q-marks">16 Marks</span>
+<span class="q-arrow">&#9660;</span>
+</div>
+<div class="q-body"><div class="q-content" id="ans-q3">
+
+<div class="sub-label">(a) Theory of Compaction &amp; Compression [06 Marks]</div>
+
+<h4>Compression:</h4>
+<p><strong>Definition:</strong> Compression is the <strong>reduction in volume of the powder bed</strong> by the application of external force (using upper and lower punches in a die). It involves the physical process of volume reduction.</p>
+
+<h4>Compaction:</h4>
+<p><strong>Definition:</strong> Compaction is a broader term that includes <strong>both compression and the formation of bonds</strong> between particles to produce a coherent compact (tablet). It encompasses all the physical and chemical changes occurring during and after compression.</p>
+
+<div class="highlight-box">
+<strong>Key Distinction:</strong> Compression = volume reduction only. Compaction = volume reduction + bond formation + structural changes. All compaction involves compression, but not all compression is compaction.
+</div>
+
+<h4>Stages of Compaction:</h4>
+<ol>
+<li><strong>Stage I &ndash; Rearrangement (Filling &amp; Packing):</strong> At low pressure, particles slide and rearrange to fill voids. Larger voids are eliminated first. No permanent deformation. Density increases moderately.</li>
+<li><strong>Stage II &ndash; Deformation at Contact Points:</strong>
+  <ul>
+  <li><strong>Elastic deformation:</strong> Particles deform but regain original shape when stress is removed (e.g., microcrystalline cellulose to some extent).</li>
+  <li><strong>Plastic deformation:</strong> Particles undergo permanent deformation without fracture (e.g., microcrystalline cellulose is highly plastic).</li>
+  <li><strong>Brittle fracture:</strong> Particles fragment into smaller pieces, creating new surfaces for bonding (e.g., lactose, dibasic calcium phosphate).</li>
+  </ul>
+</li>
+<li><strong>Stage III &ndash; Bonding:</strong> At contact points, short-range forces act: van der Waals forces, hydrogen bonding, solid bridges (from melting/solidification), mechanical interlocking.</li>
+<li><strong>Stage IV &ndash; Consolidation:</strong> Further pressure causes densification; the compact approaches its true density. Elastic recovery may occur upon pressure release (capping/lamination if excessive).</li>
+</ol>
+
+<h4>Bonding Mechanisms in Compaction:</h4>
+<ul>
+<li><strong>Cold welding (Solid bridges):</strong> Clean particle surfaces come into atomic contact, forming metallic or molecular bonds.</li>
+<li><strong>Fusion bonding:</strong> Localized melting at contact points due to frictional heat, followed by solidification.</li>
+<li><strong>Intermolecular forces:</strong> Van der Waals, hydrogen bonding between surfaces.</li>
+<li><strong>Mechanical interlocking:</strong> Irregular particles interlock physically.</li>
+</ul>
+
+<div class="exam-tip">
+<strong>&#128161; Exam Tip:</strong> Always differentiate compression from compaction. Mention the 4 stages clearly. Give examples of plastic materials (MCC) vs brittle materials (lactose). Draw a pressure-density curve showing the stages.
+</div>
+
+<div class="sub-label">(b) Kawakita and Heckle Equations [05 Marks]</div>
+
+<h4>1. Kawakita Equation:</h4>
+<p><strong>Based on:</strong> Powder compression behavior at constant pressure, relating the degree of volume reduction to applied pressure.</p>
+
+<div class="eq-block">C = (V<sub>0</sub> &minus; V) / V<sub>0</sub> = aP / (1 + bP)</div>
+<p>Or in linearized form:</p>
+<div class="eq-block">P / C = (1 / ab) + (P / a)</div>
+
+<p>Where:</p>
+<ul>
+<li>C = Degree of volume reduction = (V<sub>0</sub> &minus; V) / V<sub>0</sub></li>
+<li>V<sub>0</sub> = Initial volume of powder bed</li>
+<li>V = Volume at pressure P</li>
+<li>a = Kawakita constant = maximum compressibility (C at infinite pressure); represents the total volume reduction possible (0 &lt; a &lt; 1)</li>
+<li>b = Kawakita constant = related to the pressure required for 50% compression; lower b means easier compression</li>
+<li>P = Applied pressure</li>
+</ul>
+
+<p><strong>Use:</strong> Plot P/C vs P gives a straight line. Slope = 1/a, Intercept = 1/ab. Used to compare compressibility of different powders.</p>
+
+<h4>2. Heckel Equation:</h4>
+<p><strong>Based on:</strong> The assumption that compression follows first-order kinetics with respect to the relative density (analogous to a chemical reaction). Describes the densification of powders by plastic deformation.</p>
+
+<div class="eq-block">ln[1 / (1 &minus; D)] = KP + A</div>
+
+<p>Where:</p>
+<ul>
+<li>D = Relative density of compact at pressure P = &rho;<sub>compact</sub> / &rho;<sub>true</sub></li>
+<li>K = Heckel constant = slope = D<sub>0</sub> / (P<sub>y</sub>)</li>
+<li>P<sub>y</sub> = Yield pressure (inverse of K) &ndash; indicates the pressure at which yielding/plastic deformation begins. <strong>Lower P<sub>y</sub> = more plastic</strong> material.</li>
+<li>A = Intercept = ln[1 / (1 &minus; D<sub>0</sub>)] &rarr; related to initial packing (die filling and rearrangement)</li>
+<li>D<sub>0</sub> = Relative density at zero pressure (initial packing fraction)</li>
+</ul>
+
+<p><strong>Heckel Plot:</strong> ln[1/(1&minus;D)] vs P gives a straight line for materials that undergo predominantly plastic deformation.</p>
+
+<div class="ascii-diagram">
+  ln[1/(1-D)]
+       │          /  Plastic material
+       │         /   (steeper slope = lower Py)
+       │        /
+       │       /
+       │      /      ─── Brittle material
+       │     /         (shallower initial slope,
+       │    /          then steeper after fracture)
+       │   /
+       │  /
+       │ /
+       └──────────────────── P (Pressure)
+</div>
+
+<div class="highlight-box">
+<strong>Interpretation:</strong>
+&bull; Steeper slope (higher K, lower P<sub>y</sub>) &rarr; More plastic material (e.g., MCC)
+&bull; Shallower slope with deviation at low pressure &rarr; Brittle material, initial rearrangement followed by fracture (e.g., lactose)
+&bull; Two linear regions indicate: first region = particle rearrangement, second = plastic deformation/fracture
+</div>
+
+<div class="revision-note">
+<strong>&#128218; Short Revision Note:</strong> Kawakita = volume reduction approach (P/C vs P), good for loose powders. Heckel = density approach (ln[1/(1-D)] vs P), good for plastic deformation study. P<sub>y</sub> is the key parameter in Heckel &ndash; lower P<sub>y</sub> means more plastic.
+</div>
+
+<div class="sub-label">(c) Angle of Repose, Carr's Index, and Hausner Ratio [05 Marks]</div>
+
+<h4>1. Angle of Repose (&theta;):</h4>
+<p><strong>Definition:</strong> The maximum angle between the surface of a cone-shaped powder pile and the horizontal plane. It indicates the frictional force between particles.</p>
+
+<p><strong>Determination:</strong> Powder is allowed to flow through a funnel onto a flat surface, forming a cone. Height (h) and radius (r) of the cone are measured.</p>
+<div class="eq-block">tan &theta; = h / r &nbsp;&rarr;&nbsp; &theta; = tan<sup>&minus;1</sup>(h / r)</div>
+
+<table>
+<tr><th>Angle of Repose</th><th>Flow Character</th></tr>
+<tr><td>&lt; 25&deg;</td><td>Excellent/Free flowing</td></tr>
+<tr><td>25&ndash;30&deg;</td><td>Good flow</td></tr>
+<tr><td>30&ndash;40&deg;</td><td>Passable flow</td></tr>
+<tr><td>&gt; 40&deg;</td><td>Poor flow</td></tr>
+<tr><td>&gt; 55&deg;</td><td>Very poor flow / Cohesive</td></tr>
+</table>
+
+<h4>2. Carr's Index (Compressibility Index, CI):</h4>
+<p><strong>Definition:</strong> Based on the difference between bulk density and tapped density, expressed as a percentage.</p>
+<div class="eq-block">CI (%) = [(Tapped density &minus; Bulk density) / Tapped density] &times; 100</div>
+
+<table>
+<tr><th>Carr's Index (%)</th><th>Flow Character</th></tr>
+<tr><td>5&ndash;15</td><td>Excellent flow</td></tr>
+<tr><td>12&ndash;16</td><td>Good flow</td></tr>
+<tr><td>18&ndash;21</td><td>Fair to passable flow</td></tr>
+<tr><td>23&ndash;35</td><td>Poor flow</td></tr>
+<tr><td>33&ndash;38</td><td>Very poor flow</td></tr>
+<tr><td>&gt; 40</td><td>Extremely poor flow</td></tr>
+</table>
+
+<h4>3. Hausner Ratio (HR):</h4>
+<p><strong>Definition:</strong> The ratio of tapped density to bulk density.</p>
+<div class="eq-block">HR = Tapped density / Bulk density</div>
+
+<table>
+<tr><th>Hausner Ratio</th><th>Flow Character</th></tr>
+<tr><td>&lt; 1.11</td><td>Excellent flow</td></tr>
+<tr><td>1.12&ndash;1.18</td><td>Good flow</td></tr>
+<tr><td>1.19&ndash;1.25</td><td>Fair flow</td></tr>
+<tr><td>1.26&ndash;1.34</td><td>Poor flow</td></tr>
+<tr><td>&gt; 1.35</td><td>Very poor / Cohesive</td></tr>
+</table>
+
+<div class="highlight-box">
+<strong>Pharmacopoeial Reference:</strong> IP/BP/USP general chapter on powder flow properties recognizes Carr's Index and Hausner Ratio as official methods. Carr's Index &le; 15% and Hausner Ratio &le; 1.18 are considered acceptable for direct compression.
+</div>
+
+<div class="exam-tip">
+<strong>&#128161; Exam Tip:</strong> All three are interrelated. CI &le; 15% &asymp; HR &le; 1.18 &asymp; &theta; &le; 30&deg; = Good flow. Always write the formula and interpretation table together.
+</div>
+
+</div></div>
+</div>
+
+<!-- Q4 -->
+<div class="q-card" id="q4" data-search="colloids properties kinetic purification applications">
+<div class="q-header" onclick="toggleCard(this)">
+<span class="q-num">Q.4</span>
+<span class="q-title">Properties of Colloids | Purification of Colloids | Applications</span>
+<span class="q-marks">16 Marks</span>
+<span class="q-arrow">&#9660;</span>
+</div>
+<div class="q-body"><div class="q-content" id="ans-q4">
+
+<div class="sub-label">(a) Properties of Colloids &ndash; Kinetic Properties [06 Marks]</div>
+
+<h4>General Properties of Colloids:</h4>
+<ol>
+<li><strong>Heterogeneity:</strong> Colloidal systems consist of two phases &ndash; dispersed phase and dispersion medium.</li>
+<li><strong>Particle Size:</strong> Dispersed phase particles range from 1 nm to 1000 nm (0.001&ndash;1 &mu;m).</li>
+<li><strong>Tyndall Effect:</strong> Colloids scatter light when a beam is passed through them, producing a visible cone (Tyndall cone). True solutions do not show this.</li>
+<li><strong>Brownian Motion:</strong> Random zigzag movement of colloidal particles due to bombardment by solvent molecules.</li>
+<li><strong>Electrical Properties:</strong> Colloidal particles carry a charge (positive or negative), leading to electrophoresis and electroosmosis.</li>
+<li><strong>Optical Properties:</strong> Colloids exhibit the Faraday-Tyndall effect; electron microscopy is needed to visualize particles.</li>
+<li><strong>Colligative Properties:</strong> Osmotic pressure, boiling point elevation, freezing point depression are very small due to large particle size.</li>
+<li><strong>Sedimentation:</strong> Very slow sedimentation due to small size; balanced by Brownian motion.</li>
+<li><strong>Coagulation/Precipitation:</strong> Can be destabilized by adding electrolytes, heating, or oppositely charged colloids.</li>
+<li><strong>Surface Area:</strong> Extremely large surface area to volume ratio, responsible for adsorption phenomena.</li>
+</ol>
+
+<h4>Kinetic Properties (Detailed):</h4>
+
+<p><strong>1. Brownian Motion:</strong></p>
+<ul>
+<li>Discovered by Robert Brown (1827).</li>
+<li>Colloidal particles exhibit continuous, random, zigzag motion due to unequal bombardment by molecules of the dispersion medium.</li>
+<li><strong>Einstein's equation for mean displacement:</strong></li>
+</ul>
+<div class="eq-block">x&#772; = &radic;(RTt / 3&pi;&eta;N<sub>A</sub>r)</div>
+<p>Where: x&#772; = mean displacement, R = gas constant, T = temperature, t = time, &eta; = viscosity, N<sub>A</sub> = Avogadro's number, r = particle radius.</p>
+<ul>
+<li>Smaller particles show more vigorous Brownian motion.</li>
+<li>Higher temperature increases Brownian motion.</li>
+<li>Greater viscosity decreases Brownian motion.</li>
+</ul>
+
+<p><strong>2. Diffusion:</strong></p>
+<ul>
+<li>Colloidal particles diffuse from high concentration to low concentration, though much slower than molecular diffusion.</li>
+<li><strong>Einstein's diffusion equation:</strong></li>
+</ul>
+<div class="eq-block">D = RT / (6&pi;&eta;rN<sub>A</sub>) = kT / (6&pi;&eta;r)</div>
+<p>Where D = diffusion coefficient.</p>
+
+<p><strong>3. Sedimentation &amp; Sedimentation Equilibrium:</strong></p>
+<ul>
+<li>Due to gravity, denser particles tend to settle. However, Brownian motion opposes settling.</li>
+<li>At equilibrium, a concentration gradient is established.</li>
+<li><strong>Stokes' Law for sedimentation velocity:</strong></li>
+</ul>
+<div class="eq-block">v = 2r&sup2;(&rho; &minus; &rho;<sub>0</sub>)g / (9&eta;)</div>
+<p>Where v = sedimentation velocity, r = radius, &rho; = particle density, &rho;<sub>0</sub> = medium density, g = acceleration due to gravity.</li>
+
+<p><strong>4. Osmotic Pressure:</strong></p>
+<ul>
+<li>Van't Hoff equation modified for colloids:</li>
+</ul>
+<div class="eq-block">&pi; = cRT / M</div>
+<p>Where c = concentration, M = molecular weight of colloidal particle. Since M is very large, &pi; is very small.</p>
+
+<div class="sub-label">(b) Purification Methods of Colloidal Solutions [05 Marks]</div>
+
+<h4>1. Dialysis:</h4>
+<p><strong>Principle:</strong> A colloidal solution is placed in a bag made of a semipermeable membrane (cellophane, parchment paper, animal bladder) which allows only small molecules/ions to pass through but retains colloidal particles. The bag is suspended in pure water, and the impurities (electrolytes, small molecules) diffuse out.</p>
+<p><strong>Process:</strong> The external water is changed periodically to maintain concentration gradient. Takes several hours to days.</p>
+
+<h4>2. Electrodialysis:</h4>
+<p><strong>Principle:</strong> Dialysis is accelerated by applying an electric field across the membrane. The charged impurity ions migrate faster toward the oppositely charged electrodes.</p>
+<div class="ascii-diagram">
+    ──────(+) Anode          Cathode (&minus;)──────
+            │                    │
+    Water   │    Colloidal       │   Water
+            │    Solution        │
+            │  ┌──────────┐      │
+            │  │ Dialysis │      │
+            └──│  Bag     │──────┘
+               │ (colloid │
+               │ retained)│
+               └──────────┘
     
-    <div id="cart-drawer" class="cart-drawer fixed top-0 right-0 w-full max-w-md h-full bg-white z-50 flex flex-col shadow-2xl">
-        
-        <div class="p-6 border-b border-border flex justify-between items-center bg-surface">
-            <div>
-                <h3 class="text-lg sm:text-xl font-serif font-bold">Your Order</h3>
-                <p class="text-xs text-stone mt-0.5" id="cart-subtitle">Add items to start</p>
-            </div>
-            <button onclick="toggleCart(false)" class="p-2 hover:bg-white rounded-full border border-transparent hover:border-border transition-colors">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-            </button>
-        </div>
+    Ions migrate to electrodes &rarr; faster purification
+</div>
 
-        <div class="flex border-b border-border bg-white text-xs font-bold uppercase tracking-wider">
-            <div class="flex-1 py-3 text-center border-b-2 border-black text-black" id="tab-1">Items</div>
-            <div class="flex-1 py-3 text-center text-stone border-b-2 border-transparent" id="tab-2">Details</div>
-            <div class="flex-1 py-3 text-center text-stone border-b-2 border-transparent" id="tab-3">Confirm</div>
-        </div>
+<h4>3. Ultrafiltration:</h4>
+<p><strong>Principle:</strong> Instead of relying on natural diffusion, pressure is applied to force the solvent and dissolved impurities through an ultrafilter membrane while retaining the colloidal particles.</p>
+<p>Special filters with graded pore sizes are used. Can be combined with electrodialysis for faster results.</p>
 
-        <div class="flex-1 overflow-y-auto relative bg-canvas">
-            
-            <!-- Step 1: Items -->
-            <div id="step-1" class="p-4 sm:p-6 space-y-4 absolute top-0 left-0 w-full h-full overflow-y-auto">
-                <div id="empty-state" class="flex flex-col items-center justify-center h-full text-center">
-                    <div class="w-20 h-20 bg-surface rounded-full flex items-center justify-center mb-4 border border-border">
-                        <svg class="w-8 h-8 text-stone" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
-                    </div>
-                    <h4 class="font-semibold text-ink">Your cart is empty</h4>
-                    <p class="text-xs text-stone mt-1">Add some items from the menu</p>
-                </div>
-                <div id="cart-items" class="space-y-3 hidden"></div>
-            </div>
+<h4>4. Centrifugation (Ultracentrifugation):</h4>
+<p><strong>Principle:</strong> High centrifugal force (up to 100,000 times gravity) causes colloidal particles to sediment. The supernatant containing impurities is decanted, and the sediment is redispersed in pure solvent. Repeated to obtain pure colloid.</p>
 
-            <!-- Step 2: Details -->
-            <div id="step-2" class="p-4 sm:p-6 hidden absolute top-0 left-0 w-full h-full overflow-y-auto">
-                <div class="space-y-4">
-                    <div>
-                        <label class="block text-xs font-bold uppercase tracking-wider text-stone mb-2">Order Type</label>
-                        <div class="grid grid-cols-3 gap-2">
-                            <button onclick="setOrderType('pickup')" class="order-type-btn active bg-black text-white py-2.5 rounded-xl text-xs font-semibold transition-all" data-type="pickup">Pickup</button>
-                            <button onclick="setOrderType('delivery')" class="order-type-btn bg-white border border-border py-2.5 rounded-xl text-xs font-semibold transition-all" data-type="delivery">Delivery</button>
-                            <button onclick="setOrderType('table')" class="order-type-btn bg-white border border-border py-2.5 rounded-xl text-xs font-semibold transition-all" data-type="table">Table</button>
-                        </div>
-                    </div>
+<div class="exam-tip">
+<strong>&#128161; Exam Tip:</strong> Dialysis is the most common method. Electrodialysis = dialysis + electricity. Ultrafiltration = dialysis + pressure. For exam, draw the dialysis setup diagram.
+</div>
 
-                    <div id="info-box" class="bg-surface p-3 rounded-xl text-xs text-ink border border-border">
-                        <p>Pickup from our shop. <a href="https://maps.app.goo.gl/TRxf49KJaL5XdeRQ7" target="_blank" class="underline font-bold text-black">View Location</a></p>
-                    </div>
+<div class="sub-label">(c) Applications of Colloidal Solutions [05 Marks]</div>
 
-                    <input type="text" id="input-name" placeholder="Your Name *" class="w-full bg-white border border-border p-3 rounded-xl text-sm">
-                    <input type="tel" id="input-phone" placeholder="Phone Number *" class="w-full bg-white border border-border p-3 rounded-xl text-sm">
-                    
-                    <div id="input-addr-box" class="hidden">
-                        <textarea id="input-address" placeholder="Delivery Address *" class="w-full bg-white border border-border p-3 rounded-xl text-sm resize-none"></textarea>
-                        <p class="text-[10px] text-stone mt-1 italic">* Delivery charges will be confirmed on WhatsApp.</p>
-                    </div>
+<h4>Pharmaceutical Applications:</h4>
+<ol>
+<li><strong>Drug Delivery Systems:</strong>
+  <ul>
+  <li>Liposomes (phospholipid vesicles) for targeted drug delivery</li>
+  <li>Niosomes, transfersomes for transdermal delivery</li>
+  <li>Polymeric nanoparticles for controlled release</li>
+  </ul>
+</li>
+<li><strong>Parenteral Preparations:</strong> Colloidal solutions of silver (Argyrol), colloidal gold used as germicides and therapeutic agents.</li>
+<li><strong>Ophthalmic Preparations:</strong> Colloidal silver proteins used as antiseptic eye drops.</li>
+<li><strong>Natural Colloids in Medicine:</strong>
+  <ul>
+  <li>Blood plasma (colloidal solution of proteins) &ndash; plasma expander</li>
+  <li>Gelatin solutions used as plasma substitutes</li>
+  <li>Dextran solutions as blood volume expanders</li>
+  </ul>
+</li>
+<li><strong>Diagnostic Applications:</strong>
+  <ul>
+  <li>Colloidal gold conjugates in immunochromatographic tests (pregnancy tests, rapid antigen tests)</li>
+  </ul>
+</li>
+<li><strong>Dermatological Preparations:</strong> Calamine lotion (suspension of ZnO in colloidal form), colloidal sulfur for acne treatment.</li>
+</ol>
 
-                    <div id="input-table-box" class="hidden">
-                        <input type="text" id="input-table" placeholder="Table Number *" class="w-full bg-white border border-border p-3 rounded-xl text-sm">
-                    </div>
+<h4>Non-Pharmaceutical Applications:</h4>
+<ol start="7">
+<li><strong>Food Industry:</strong> Milk, butter, mayonnaise, ice cream are all colloidal systems.</li>
+<li><strong>Water Purification:</strong> Alum (Al<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub>) causes coagulation of colloidal impurities.</li>
+<li><strong>Industrial:</strong> Inks, paints, rubber latex, photographic emulsions.</li>
+<li><strong>Analytical Chemistry:</strong> Colloidal gold used in electron microscopy staining.</li>
+</ol>
 
-                    <textarea id="input-notes" placeholder="Special Instructions (Optional)" class="w-full bg-white border border-border p-3 rounded-xl text-sm resize-none h-20"></textarea>
-                </div>
-            </div>
+</div></div>
+</div>
 
-            <!-- Step 3: Summary -->
-            <div id="step-3" class="p-4 sm:p-6 hidden absolute top-0 left-0 w-full h-full overflow-y-auto">
-                <div class="bg-white border border-border rounded-2xl p-4 mb-4">
-                    <div id="sum-items" class="space-y-2 text-sm border-b border-border pb-3 mb-3"></div>
-                    <div class="space-y-2 text-sm">
-                        <div class="flex justify-between text-stone"><span>Subtotal</span> <span id="sum-sub">₹0</span></div>
-                        <div class="flex justify-between text-stone" id="sum-parcel-row"><span>Parcel Charge</span> <span>₹10</span></div>
-                        <div class="flex justify-between font-bold text-lg pt-2 border-t border-border mt-2"><span>Total</span> <span id="sum-total">₹0</span></div>
-                    </div>
-                </div>
-                <div class="bg-white border border-border rounded-2xl p-4 text-sm space-y-2">
-                    <div class="flex justify-between"><span class="text-stone">Name</span> <span class="font-medium" id="sum-name">-</span></div>
-                    <div class="flex justify-between"><span class="text-stone">Phone</span> <span class="font-medium" id="sum-phone">-</span></div>
-                    <div class="flex justify-between"><span class="text-stone">Type</span> <span class="font-medium uppercase" id="sum-type">-</span></div>
-                    <div class="flex justify-between hidden" id="sum-addr-row"><span class="text-stone">Address</span> <span class="font-medium text-right w-1/2" id="sum-address">-</span></div>
-                </div>
-            </div>
-        </div>
+<!-- Q5 -->
+<div class="q-card" id="q5" data-search="second order kinetics half life shelf life first order reaction order determination">
+<div class="q-header" onclick="toggleCard(this)">
+<span class="q-num">Q.5</span>
+<span class="q-title">Second Order Kinetics | Determination of Reaction Order | First Order Kinetics</span>
+<span class="q-marks">16 Marks</span>
+<span class="q-arrow">&#9660;</span>
+</div>
+<div class="q-body"><div class="q-content" id="ans-q5">
 
-        <div class="p-4 sm:p-6 border-t border-border bg-white mt-auto">
-            <button id="action-btn" onclick="handleAction()" class="w-full btn-primary bg-white border border-black text-black py-4 rounded-xl font-semibold flex items-center justify-center gap-2 disabled:opacity-30 disabled:cursor-not-allowed">
-                Continue <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-            </button>
-        </div>
-    </div>
+<div class="sub-label">(a) Second Order Kinetics &ndash; Derivation with Half Life and Shelf Life [06 Marks]</div>
 
-    <script>
-        // --- DATA ---
-        const menuData = [
-            { id: 1, name: "Bateta Bhungla", desc: "Kids Level - Sweet & Mild", price: 60, cat: "bhungla", spice: 1, img: "logo-placeholder.png" },
-            { id: 2, name: "Bateta Bhungla", desc: "Sugar Kisses Spice", price: 60, cat: "bhungla", spice: 2, img: "logo-placeholder.png" },
-            { id: 3, name: "Spicy Bhungla", desc: "Spicy Lover Paradise", price: 60, cat: "bhungla", spice: 3, img: "logo-placeholder.png" },
-            { id: 4, name: "Super Spicy Bhungla", desc: "Feel The Burn", price: 60, cat: "bhungla", spice: 4, img: "logo-placeholder.png" },
-            { id: 5, name: "Rocket Spicy Bhungla", desc: "Survival Test", price: 70, cat: "bhungla", spice: 5, img: "logo-placeholder.png" },
-            { id: 6, name: "Swaminarayan Special", desc: "No Onion, No Garlic", price: 60, cat: "bhungla", spice: 2, img: "logo-placeholder.png" },
-            { id: 7, name: "Extra Bhungla", desc: "12 No. Extra", price: 10, cat: "bhungla", spice: 0, img: "logo-placeholder.png" },
-            { id: 8, name: "Chanamath", desc: "Chana + Math + Bateta", price: 60, cat: "snacks", spice: 2, img: "logo-placeholder.png" },
-            { id: 9, name: "Dahi Vada", desc: "Jain & Swaminarayan", price: 70, cat: "snacks", spice: 0, img: "logo-placeholder.png" },
-            { id: 10, name: "Mix Plate", desc: "The Complete Combo", price: 100, cat: "snacks", spice: 0, img: "logo-placeholder.png" },
-            { id: 11, name: "Extra Sing", desc: "Crunchy Sev", price: 10, cat: "snacks", spice: 0, img: "logo-placeholder.png" },
-            { id: 12, name: "Buttermilk", desc: "Refreshing 250ml", price: 20, cat: "drinks", spice: 0, img: "logo-placeholder.png" },
-            { id: 13, name: "Ghorvu", desc: "Village Style 250ml", price: 40, cat: "drinks", spice: 0, img: "logo-placeholder.png" }
-        ];
+<h4>Definition:</h4>
+<p>In second order kinetics, the <strong>rate of reaction is directly proportional to the square of the concentration of a single reactant</strong> (or the product of concentrations of two reactants, each to the first power).</p>
 
-        let cart = [];
-        let currentStep = 1;
-        let orderType = 'pickup';
-        const PARCEL_CHARGE = 10;
-        const WA_NUMBER = '919824847345';
+<p><strong>Rate Expression:</strong></p>
+<div class="eq-block">&minus;d[A]/dt = k<sub>2</sub>[A]<sup>2</sup></div>
+<p>Where: k<sub>2</sub> = second order rate constant (units: L mol<sup>&minus;1</sup> s<sup>&minus;1</sup> or M<sup>&minus;1</sup> s<sup>&minus;1</sup>)</p>
 
-        // --- UTILS ---
-        const getQty = id => (cart.find(c => c.id === id) || {qty: 0}).qty;
-        const getTotal = () => cart.reduce((s, i) => s + (i.price * i.qty), 0);
-        const getCount = () => cart.reduce((s, i) => s + i.qty, 0);
+<h4>Derivation (for single reactant type: A &rarr; Products):</h4>
+<p>Starting with the rate law:</p>
+<div class="eq-block">&minus;d[A]/dt = k<sub>2</sub>[A]<sup>2</sup></div>
 
-        // --- RENDER MENU ---
-        function renderMenu(cat) {
-            const data = cat === 'all' ? menuData : menuData.filter(i => i.cat === cat);
-            const container = document.getElementById('menu-container');
-            
-            container.innerHTML = data.map((item, idx) => {
-                const qty = getQty(item.id);
-                return `
-                <div class="menu-card bg-white border border-border rounded-2xl overflow-hidden flex flex-col group animate-reveal" style="transition-delay: ${idx * 50}ms">
-                    <div class="relative w-full h-48 sm:h-56 bg-surface border-b border-border overflow-hidden">
-                        <img src="${item.img}" alt="${item.name}" class="w-full h-full object-contain p-4 img-monochrome">
-                        ${item.spice > 0 ? `
-                        <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border border-border shadow-sm text-ink">
-                            Level ${item.spice}
-                        </div>` : ''}
-                    </div>
-                    <div class="p-4 sm:p-5 flex flex-col flex-grow">
-                        <div class="flex justify-between items-start mb-2">
-                            <h3 class="font-bold text-base sm:text-lg text-ink leading-tight pr-2">${item.name}</h3>
-                            <span class="font-bold text-base sm:text-lg text-ink">₹${item.price}</span>
-                        </div>
-                        <p class="text-xs text-stone mb-4">${item.desc}</p>
+<p>Separating variables:</p>
+<div class="eq-block">&minus;d[A]/[A]<sup>2</sup> = k<sub>2</sub> dt</div>
 
-                        <!-- Spice Meter -->
-                        ${item.spice > 0 ? `
-                        <div class="mb-4 mt-auto">
-                            <div class="flex justify-between items-center mb-1.5">
-                                <span class="text-[10px] font-bold uppercase tracking-wider text-stone">Spice Level</span>
-                            </div>
-                            <div class="w-full h-1.5 bg-surface rounded-full overflow-hidden">
-                                <div class="h-full bg-black rounded-full transition-all duration-500" style="width: ${(item.spice/5)*100}%"></div>
-                            </div>
-                        </div>
-                        ` : '<div class="mb-4 mt-auto"></div>'}
+<p>Integrating from t = 0 to t = t, where [A]<sub>0</sub> = initial concentration, [A] = concentration at time t:</p>
+<div class="eq-block">&int;<sub>[A]<sub>0</sub></sub><sup>[A]</sup> &minus;d[A]/[A]<sup>2</sup> = &int;<sub>0</sub><sup>t</sup> k<sub>2</sub> dt</div>
 
-                        <!-- Actions -->
-                        <div class="flex items-center justify-between pt-3 border-t border-border">
-                            <div class="flex items-center border border-border rounded-full overflow-hidden bg-canvas">
-                                <button class="w-9 h-9 flex items-center justify-center text-lg text-stone hover:bg-black hover:text-white transition-colors" onclick="updateCart(${item.id}, -1)">−</button>
-                                <div class="w-8 text-center text-sm font-bold text-ink">${qty}</div>
-                                <button class="w-9 h-9 flex items-center justify-center text-lg text-stone hover:bg-black hover:text-white transition-colors" onclick="updateCart(${item.id}, 1)">+</button>
-                            </div>
-                            
-                            <button onclick="updateCart(${item.id}, 1)" class="bg-black text-white px-5 py-2 rounded-full text-xs font-semibold hover:bg-white hover:text-black border border-black transition-colors">
-                                Add
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            `}).join('');
+<div class="eq-block">[1/[A]]<sub>[A]<sub>0</sub></sub><sup>[A]</sup> = k<sub>2</sub>[t]<sub>0</sub><sup>t</sup></div>
 
-            // Trigger animations
-            requestAnimationFrame(() => {
-                observeElements();
-            });
-        }
+<div class="eq-block"><strong>1/[A] &minus; 1/[A]<sub>0</sub> = k<sub>2</sub>t</strong></div>
 
-        function filterMenu(cat) {
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                const isActive = btn.dataset.cat === cat;
-                btn.classList.toggle('bg-black', isActive);
-                btn.classList.toggle('text-white', isActive);
-                btn.classList.toggle('border-border', !isActive);
-                btn.classList.toggle('text-ink', !isActive);
-            });
-            renderMenu(cat);
-        }
+<p>This is the <strong>integrated rate equation for second order kinetics</strong>.</p>
 
-        // --- CART LOGIC ---
-        function updateCart(id, delta) {
-            const existing = cart.find(c => c.id === id);
-            if (existing) {
-                existing.qty += delta;
-                if (existing.qty <= 0) cart = cart.filter(c => c.id !== id);
-            } else if (delta > 0) {
-                const item = menuData.find(m => m.id === id);
-                cart.push({ ...item, qty: 1 });
-            }
-            updateUI();
-            renderMenu(document.querySelector('.filter-btn.bg-black')?.dataset.cat || 'all');
-            renderCartItems();
-        }
+<p>Alternative form:</p>
+<div class="eq-block">[A] = [A]<sub>0</sub> / (1 + k<sub>2</sub>[A]<sub>0</sub>t)</div>
 
-        function updateUI() {
-            const count = getCount();
-            const total = getTotal();
+<h5>Graphical Representation:</h5>
+<p>Plot of <strong>1/[A] vs t</strong> gives a straight line with:</p>
+<ul>
+<li>Slope = k<sub>2</sub></li>
+<li>Intercept = 1/[A]<sub>0</sub></li>
+</ul>
 
-            // Nav Counter
-            document.getElementById('nav-cart-count').textContent = count;
-            
-            // Mobile Bar
-            const mBar = document.getElementById('mobile-bar');
-            if(count > 0) mBar.classList.remove('hidden');
-            else mBar.classList.add('hidden');
-            
-            document.getElementById('m-count').textContent = count;
-            document.getElementById('m-total').textContent = `₹${total}`;
-        }
+<h4>Half Life (t<sub>1/2</sub>):</h4>
+<p>At t<sub>1/2</sub>, [A] = [A]<sub>0</sub>/2. Substituting in the integrated equation:</p>
+<div class="eq-block">1/([A]<sub>0</sub>/2) &minus; 1/[A]<sub>0</sub> = k<sub>2</sub> &times; t<sub>1/2</sub></div>
+<div class="eq-block">2/[A]<sub>0</sub> &minus; 1/[A]<sub>0</sub> = k<sub>2</sub> &times; t<sub>1/2</sub></div>
+<div class="eq-block"><strong>t<sub>1/2</sub> = 1 / (k<sub>2</sub>[A]<sub>0</sub>)</strong></div>
 
-        function renderCartItems() {
-            const container = document.getElementById('cart-items');
-            const empty = document.getElementById('empty-state');
-            const subtitle = document.getElementById('cart-subtitle');
-            const actionBtn = document.getElementById('action-btn');
+<div class="highlight-box">
+<strong>Important:</strong> Half life of a second order reaction is <strong>inversely proportional to initial concentration</strong>. Unlike first order, t<sub>1/2</sub> is NOT constant &ndash; it increases as the reaction proceeds and concentration decreases.
+</div>
 
-            if (cart.length === 0) {
-                empty.classList.remove('hidden');
-                container.classList.add('hidden');
-                subtitle.textContent = "Add items to start";
-                actionBtn.disabled = true;
-            } else {
-                empty.classList.add('hidden');
-                container.classList.remove('hidden');
-                subtitle.textContent = `${getCount()} items in cart`;
-                actionBtn.disabled = false;
+<h4>Shelf Life (t<sub>90</sub>):</h4>
+<p>Shelf life is the time at which 90% of the drug remains (i.e., 10% degraded): [A] = 0.9[A]<sub>0</sub></p>
+<div class="eq-block">1/(0.9[A]<sub>0</sub>) &minus; 1/[A]<sub>0</sub> = k<sub>2</sub> &times; t<sub>90</sub></div>
+<div class="eq-block">(1.111 &minus; 1)/[A]<sub>0</sub> = k<sub>2</sub> &times; t<sub>90</sub></div>
+<div class="eq-block"><strong>t<sub>90</sub> = 0.111 / (k<sub>2</sub>[A]<sub>0</sub>)</strong></div>
 
-                container.innerHTML = cart.map(i => `
-                    <div class="flex items-center gap-3 p-3 bg-white rounded-xl border border-border shadow-sm">
-                        <img src="${i.img}" class="w-16 h-16 rounded-lg object-contain bg-surface p-1">
-                        <div class="flex-1">
-                            <h4 class="text-sm font-semibold text-ink">${i.name}</h4>
-                            <p class="text-xs text-stone">₹${i.price} each</p>
-                        </div>
-                        <div class="flex items-center border border-border rounded-full overflow-hidden bg-canvas">
-                            <button class="w-7 h-7 flex items-center justify-center text-sm text-stone hover:bg-black hover:text-white" onclick="updateCart(${i.id}, -1)">−</button>
-                            <div class="w-6 text-center text-xs font-bold text-ink">${i.qty}</div>
-                            <button class="w-7 h-7 flex items-center justify-center text-sm text-stone hover:bg-black hover:text-white" onclick="updateCart(${i.id}, 1)">+</button>
-                        </div>
-                    </div>
-                `).join('');
-            }
-        }
+<p>Or equivalently:</p>
+<div class="eq-block"><strong>t<sub>90</sub> = t<sub>1/2</sub> / 9</strong></div>
 
-        // --- INTERACTIONS ---
-        function toggleCart(open) {
-            const drawer = document.getElementById('cart-drawer');
-            const overlay = document.getElementById('cart-overlay');
-            
-            if (open) {
-                drawer.classList.add('open');
-                overlay.classList.remove('opacity-0', 'pointer-events-none');
-                document.body.style.overflow = 'hidden';
-                renderCartItems();
-                goToStep(1);
-            } else {
-                drawer.classList.remove('open');
-                overlay.classList.add('opacity-0', 'pointer-events-none');
-                document.body.style.overflow = '';
-            }
-        }
+<div class="sub-label">(b) Determination of Reaction Order [05 Marks]</div>
 
-        function goToStep(step) {
-            currentStep = step;
-            [1, 2, 3].forEach(s => {
-                const tab = document.getElementById(`tab-${s}`);
-                const content = document.getElementById(`step-${s}`);
-                
-                if (s <= step) {
-                    tab.classList.add('border-black', 'text-black');
-                    tab.classList.remove('border-transparent', 'text-stone');
-                } else {
-                    tab.classList.remove('border-black', 'text-black');
-                    tab.classList.add('border-transparent', 'text-stone');
-                }
-                
-                content.classList.toggle('hidden', s !== step);
-            });
+<h4>Methods to Determine Reaction Order:</h4>
 
-            const btn = document.getElementById('action-btn');
-            if (step === 1) btn.innerHTML = `Continue <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>`;
-            else if (step === 2) btn.innerHTML = `Review Order <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>`;
-            else if (step === 3) btn.innerHTML = `Send Order <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>`;
-        }
+<p><strong>1. Substitution Method (Trial and Error Method):</strong></p>
+<ul>
+<li>Substitute experimental concentration-time data into the integrated rate equations of zero, first, and second order.</li>
+<li>The equation that gives a constant value of k for all time points indicates the order.</li>
+<li>Simple but tedious; may give ambiguous results for fractional orders.</li>
+</ul>
 
-        function handleAction() {
-            if (currentStep === 1) goToStep(2);
-            else if (currentStep === 2) { if (validateForm()) { generateSummary(); goToStep(3); } }
-            else if (currentStep === 3) sendWhatsApp();
-        }
+<p><strong>2. Graphical Method:</strong></p>
+<table>
+<tr><th>Order</th><th>Plot</th><th>Straight line when</th></tr>
+<tr><td>Zero</td><td>[A] vs t</td><td>Slope = &minus;k<sub>0</sub></td></tr>
+<tr><td>First</td><td>ln[A] vs t</td><td>Slope = &minus;k<sub>1</sub></td></tr>
+<tr><td>Second</td><td>1/[A] vs t</td><td>Slope = k<sub>2</sub></td></tr>
+</table>
+<p>The plot that gives the best straight line (highest R&sup2;) indicates the reaction order.</p>
 
-        function setOrderType(type) {
-            orderType = type;
-            document.querySelectorAll('.order-type-btn').forEach(btn => {
-                const isActive = btn.dataset.type === type;
-                btn.classList.toggle('bg-black', isActive);
-                btn.classList.toggle('text-white', isActive);
-                btn.classList.toggle('bg-white', !isActive);
-                btn.classList.toggle('border-border', !isActive);
-            });
+<p><strong>3. Initial Rate Method (Differential Method):</strong></p>
+<ul>
+<li>Multiple experiments are performed with different initial concentrations [A]<sub>0</sub>.</li>
+<li>The initial rate (slope of [A] vs t at t &rarr; 0) is determined for each.</li>
+<li>From: Rate = k[A]<sub>0</sub><sup>n</sup>, taking log: log(Rate) = log k + n &times; log[A]<sub>0</sub></li>
+<li>Plot log(Rate) vs log[A]<sub>0</sub> &rarr; slope = order (n), intercept = log k.</li>
+</ul>
+<div class="eq-block">n = log(Rate<sub>1</sub>/Rate<sub>2</sub>) / log([A]<sub>0,1</sub>/[A]<sub>0,2</sub>)</div>
 
-            const infoBox = document.getElementById('info-box');
-            const addrBox = document.getElementById('input-addr-box');
-            const tableBox = document.getElementById('input-table-box');
+<p><strong>4. Half Life Method:</strong></p>
+<ul>
+<li>Perform experiments at different initial concentrations.</li>
+<li>Determine t<sub>1/2</sub> for each.</li>
+<li>Relationship: t<sub>1/2</sub> &prop; 1/[A]<sub>0</sub><sup>(n&minus;1)</sup></li>
+<li>Taking log: log(t<sub>1/2</sub>) = constant &minus; (n&minus;1) &times; log[A]<sub>0</sub></li>
+<li>Plot log(t<sub>1/2</sub>) vs log[A]<sub>0</sub> &rarr; slope = &minus;(n&minus;1)</li>
+</ul>
 
-            if (type === 'pickup') {
-                infoBox.innerHTML = `<p>Pickup from our shop. <a href="https://maps.app.goo.gl/TRxf49KJaL5XdeRQ7" target="_blank" class="underline font-bold text-black">View Map</a></p>`;
-                infoBox.classList.remove('hidden'); addrBox.classList.add('hidden'); tableBox.classList.add('hidden');
-            } else if (type === 'delivery') {
-                infoBox.classList.add('hidden'); addrBox.classList.remove('hidden'); tableBox.classList.add('hidden');
-            } else {
-                infoBox.innerHTML = `<p>Ordering to table.</p>`;
-                infoBox.classList.remove('hidden'); addrBox.classList.add('hidden'); tableBox.classList.remove('hidden');
-            }
-        }
+<p><strong>5. Ostwald's Isolation Method:</strong></p>
+<ul>
+<li>For reactions with multiple reactants, keep all but one at large excess (their concentrations remain essentially constant).</li>
+<li>Determine the order with respect to each reactant separately.</li>
+<li>Total order = sum of individual orders.</li>
+</ul>
 
-        function validateForm() {
-            const name = document.getElementById('input-name').value;
-            const phone = document.getElementById('input-phone').value;
-            if (!name) return alert("Please enter your name"), false;
-            if (!phone || phone.length < 10) return alert("Please enter a valid 10-digit phone number"), false;
-            if (orderType === 'delivery' && !document.getElementById('input-address').value) return alert("Please enter delivery address"), false;
-            if (orderType === 'table' && !document.getElementById('input-table').value) return alert("Please enter table number"), false;
-            return true;
-        }
+<div class="exam-tip">
+<strong>&#128161; Exam Tip:</strong> Graphical method is most commonly asked. Remember: Zero = [A] vs t, First = ln[A] vs t, Second = 1/[A] vs t. For initial rate method, always write the log equation.
+</div>
 
-        function generateSummary() {
-            const sub = getTotal();
-            const parcel = orderType !== 'table' ? PARCEL_CHARGE : 0;
-            const total = sub + parcel;
+<div class="sub-label">(c) First Order Kinetics &ndash; Derivation with Half Life and Shelf Life [05 Marks]</div>
 
-            document.getElementById('sum-items').innerHTML = cart.map(i => `
-                <div class="flex justify-between text-stone"><span>${i.qty}x ${i.name}</span> <span>₹${i.price * i.qty}</span></div>
-            `).join('');
-            document.getElementById('sum-sub').textContent = `₹${sub}`;
-            document.getElementById('sum-total').textContent = `₹${total}`;
-            document.getElementById('sum-parcel-row').classList.toggle('hidden', orderType === 'table');
-            
-            document.getElementById('sum-name').textContent = document.getElementById('input-name').value;
-            document.getElementById('sum-phone').textContent = document.getElementById('input-phone').value;
-            document.getElementById('sum-type').textContent = orderType;
-            
-            const addrRow = document.getElementById('sum-addr-row');
-            if (orderType === 'delivery') {
-                addrRow.classList.remove('hidden');
-                document.getElementById('sum-address').textContent = document.getElementById('input-address').value;
-            } else {
-                addrRow.classList.add('hidden');
-            }
-        }
+<h4>Definition:</h4>
+<p>In first order kinetics, the <strong>rate of reaction is directly proportional to the first power of the concentration of a single reactant</strong>.</p>
 
-        function sendWhatsApp() {
-            const name = document.getElementById('input-name').value;
-            const phone = document.getElementById('input-phone').value;
-            const notes = document.getElementById('input-notes').value;
-            const sub = getTotal();
-            const parcel = orderType !== 'table' ? PARCEL_CHARGE : 0;
-            const total = sub + parcel;
+<div class="eq-block">&minus;d[A]/dt = k<sub>1</sub>[A]</div>
+<p>Where: k<sub>1</sub> = first order rate constant (units: s<sup>&minus;1</sup>, min<sup>&minus;1</sup>, hr<sup>&minus;1</sup>, day<sup>&minus;1</sup>)</p>
 
-            let msg = `*Order - Bunty Kaka*%0A%0A`;
-            msg += `*Name:* ${name}%0A*Phone:* ${phone}%0A*Type:* ${orderType.toUpperCase()}%0A`;
-            if (orderType === 'delivery') msg += `*Address:* ${document.getElementById('input-address').value}%0A`;
-            if (orderType === 'table') msg += `*Table:* ${document.getElementById('input-table').value}%0A`;
-            msg += `%0A*Items:*%0A`;
-            cart.forEach(i => msg += `${i.qty}x ${i.name} - ₹${i.price * i.qty}%0A`);
-            msg += `%0A*Subtotal:* ₹${sub}%0A`;
-            if (parcel > 0) msg += `*Parcel:* ₹${parcel}%0A`;
-            msg += `*TOTAL:* ₹${total}%0A`;
-            if (notes) msg += `%0A*Notes:* ${notes}%0A`;
+<h4>Derivation:</h4>
+<p>Starting with the rate law:</p>
+<div class="eq-block">&minus;d[A]/dt = k<sub>1</sub>[A]</div>
 
-            window.open(`https://wa.me/${WA_NUMBER}?text=${msg}`, '_blank');
-        }
+<p>Separating variables:</p>
+<div class="eq-block">&minus;d[A]/[A] = k<sub>1</sub> dt</div>
 
-        // --- ANIMATIONS & OBSERVERS ---
-        function observeElements() {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, { threshold: 0.1 });
+<p>Integrating from t = 0 to t = t:</p>
+<div class="eq-block">&minus;&int;<sub>[A]<sub>0</sub></sub><sup>[A]</sup> d[A]/[A] = &int;<sub>0</sub><sup>t</sup> k<sub>1</sub> dt</div>
 
-            document.querySelectorAll('.animate-reveal').forEach(el => observer.observe(el));
-        }
+<div class="eq-block">&minus;[ln[A]]<sub>[A]<sub>0</sub></sub><sup>[A]</sup> = k<sub>1</sub>[t]<sub>0</sub><sup>t</sup></div>
 
-        // --- INIT ---
-        renderMenu('all');
-        observeElements();
-    </script>
+<div class="eq-block">&minus;(ln[A] &minus; ln[A]<sub>0</sub>) = k<sub>1</sub>t</div>
+
+<div class="eq-block"><strong>ln[A]<sub>0</sub> &minus; ln[A] = k<sub>1</sub>t</strong></div>
+
+<p>Or in various forms:</p>
+<div class="eq-block"><strong>ln([A]<sub>0</sub>/[A]) = k<sub>1</sub>t</strong></div>
+<div class="eq-block"><strong>log([A]<sub>0</sub>/[A]) = k<sub>1</sub>t / 2.303</strong></div>
+<div class="eq-block"><strong>[A] = [A]<sub>0</sub> &times; e<sup>&minus;k<sub>1</sub>t</sup></strong></div>
+
+<h5>Graphical Representation:</h5>
+<ul>
+<li>Plot of <strong>ln[A] vs t</strong> &rarr; straight line, slope = &minus;k<sub>1</sub>, intercept = ln[A]<sub>0</sub></li>
+<li>Plot of <strong>log[A] vs t</strong> &rarr; straight line, slope = &minus;k<sub>1</sub>/2.303</li>
+</ul>
+
+<h4>Half Life (t<sub>1/2</sub>):</h4>
+<p>At t<sub>1/2</sub>, [A] = [A]<sub>0</sub>/2:</p>
+<div class="eq-block">ln([A]<sub>0</sub>/([A]<sub>0</sub>/2)) = k<sub>1</sub> &times; t<sub>1/2</sub></div>
+<div class="eq-block">ln(2) = k<sub>1</sub> &times; t<sub>1/2</sub></div>
+<div class="eq-block"><strong>t<sub>1/2</sub> = 0.693 / k<sub>1</strong></div>
+
+<div class="highlight-box">
+<strong>Key Feature:</strong> Half life of a first order reaction is <strong>INDEPENDENT of initial concentration</strong>. This is the hallmark of first order kinetics and is of great importance in pharmacy (most drug degradation follows first order).
+</div>
+
+<h4>Shelf Life (t<sub>90</sub>):</h4>
+<p>At t<sub>90</sub>, [A] = 0.9[A]<sub>0</sub>:</p>
+<div class="eq-block">ln([A]<sub>0</sub>/(0.9[A]<sub>0</sub>)) = k<sub>1</sub> &times; t<sub>90</sub></div>
+<div class="eq-block">ln(1/0.9) = k<sub>1</sub> &times; t<sub>90</sub></div>
+<div class="eq-block">ln(1.111) = k<sub>1</sub> &times; t<sub>90</sub></div>
+<div class="eq-block"><strong>t<sub>90</sub> = 0.1054 / k<sub>1</strong></div>
+
+<p>Or using log form:</p>
+<div class="eq-block"><strong>t<sub>90</sub> = 0.152 / k<sub>1</sub></strong> (when using log base 10: log(1/0.9) &times; 2.303/k<sub>1</sub>)</div>
+
+<div class="revision-note">
+<strong>&#128218; Short Revision Note:</strong> First order: t<sub>1/2</sub> = 0.693/k (independent of [A]<sub>0</sub>), t<sub>90</sub> = 0.105/k. Second order: t<sub>1/2</sub> = 1/(k[A]<sub>0</sub>) (depends on [A]<sub>0</sub>), t<sub>90</sub> = 0.111/(k[A]<sub>0</sub>). Most drug degradation = first order.
+</div>
+
+</div></div>
+</div>
+
+<!-- Q6 -->
+<div class="q-card" id="q6" data-search="emulsion theories flocculated deflocculated suspension surfactant HLB">
+<div class="q-header" onclick="toggleCard(this)">
+<span class="q-num">Q.6</span>
+<span class="q-title">Emulsion &amp; Theories | Flocculated vs Deflocculated | Surfactant &amp; HLB</span>
+<span class="q-marks">16 Marks</span>
+<span class="q-arrow">&#9660;</span>
+</div>
+<div class="q-body"><div class="q-content" id="ans-q6">
+
+<div class="sub-label">(a) Emulsion &ndash; Definition &amp; Theories of Emulsification [06 Marks]</div>
+
+<h4>Definition of Emulsion:</h4>
+<p>An <strong>emulsion</strong> is a thermodynamically unstable, biphasic system consisting of at least two immiscible liquids, one of which is dispersed as fine droplets (internal/dispersed phase) within the other (external/continuous phase), stabilized by an emulsifying agent.</p>
+
+<p><strong>Types:</strong> Oil-in-Water (O/W) &ndash; oil dispersed in water; Water-in-Oil (W/O) &ndash; water dispersed in oil.</p>
+
+<h4>Theories of Emulsification:</h4>
+
+<p><strong>1. Surface Tension Theory (Reduced Surface Tension Theory):</strong></p>
+<ul>
+<li>Proposed by <strong>Worthington</strong>.</li>
+<li>Emulsifying agents reduce the interfacial tension between the two immiscible liquids.</li>
+<li>Lower interfacial tension &rarr; less energy required to break the dispersed phase into droplets &rarr; easier emulsification.</li>
+<li><strong>Limitation:</strong> Explains emulsion formation but not stability, as thermodynamically the system should still separate (emulsions are still unstable even with reduced tension).</li>
+</ul>
+
+<p><strong>2. Oriented Wedge Theory (Bancroft's Rule):</strong></p>
+<ul>
+<li>Proposed by <strong>Harkins</strong>.</li>
+<li>The emulsifying agent forms a monolayer at the interface, with its molecules oriented such that the <strong>greater cross-sectional area faces the continuous phase</strong>.</li>
+<li>If the emulsifier has a larger hydrophilic head (wedge shape with broad end in water) &rarr; O/W emulsion.</li>
+<li>If the emulsifier has a larger lipophilic tail (broad end in oil) &rarr; W/O emulsion.</li>
+<li><strong>Bancroft's Rule:</strong> "The phase in which the emulsifier is more soluble becomes the continuous phase."</li>
+<li><strong>Limitation:</strong> Doesn't explain emulsions formed with ionic surfactants or solid particle emulsifiers.</li>
+</ul>
+
+<div class="ascii-diagram">
+  O/W Emulsion:                W/O Emulsion:
+     Water (continuous)           Oil (continuous)
+  ═══════════════════         ═══════════════════
+       ○ ○ ○                      ○ ○ ○
+     ○  ●●●  ○  &larr; Water      ○  ●●●  ○  &larr; Oil
+       ○ ○ ○      droplet          ○ ○ ○      droplet
+  ═══════════════════         ═══════════════════
+     Oil (dispersed)             Water (dispersed)
+  
+  ●●● = Emulsifier (wedge shape oriented)
+  Broad end always faces continuous phase
+</div>
+
+<p><strong>3. Interfacial Film Theory:</strong></p>
+<ul>
+<li>Proposed by <strong>Schulman and Cockbain</strong>.</li>
+<li>The emulsifier forms a <strong>mechanically strong, coherent, and elastic film</strong> at the interface between the two liquids.</li>
+<li>This film prevents coalescence of dispersed droplets by acting as a physical barrier.</li>
+<li><strong>Combined films</strong> (e.g., sodium cetyl sulfate + cholesterol) are stronger than single-component films.</li>
+<li>This theory best explains <strong>emulsion stability</strong>.</li>
+</ul>
+
+<p><strong>4. Viscosity Theory:</strong></p>
+<ul>
+<li>The emulsifier increases the viscosity of the continuous phase.</li>
+<li>Higher viscosity reduces the kinetic movement of dispersed droplets, slowing down coalescence.</li>
+<li>Explains the stabilizing effect of gums (tragacanth, acacia) and polymers.</li>
+</ul>
+
+<p><strong>5. Electrical Double Layer Theory:</strong></p>
+<ul>
+li>Applicable to O/W emulsions stabilized by ionic emulsifiers.</li>
+<li>The charged emulsifier creates an electrical double layer around each droplet, causing repulsion between droplets.</li>
+<li>This electrostatic repulsion prevents coalescence.</li>
+</ul>
+
+<div class="sub-label">(b) Differentiate Flocculated and Deflocculated Suspension [05 Marks]</div>
+
+<table>
+<tr><th>Parameter</th><th>Flocculated Suspension</th><th>Deflocculated Suspension</th></tr>
+<tr><td><strong>Particle Arrangement</strong></td><td>Particles form loose aggregates (flocs) with a lattice-like structure</td><td>Particles exist as separate, individual entities (no aggregation)</td></tr>
+<tr><td><strong>Forces</strong></td><td>Weak attractive forces between particles (secondary minimum)</td><td>Repulsive forces dominate (electrostatic repulsion)</td></tr>
+<tr><td><strong>Sedimentation Rate</strong></td><td>Faster (due to larger effective size of flocs)</td><td>Slower (individual small particles)</td></tr>
+<tr><td><strong>Sediment Character</strong></td><td>Loose, easily redispersible sediment (high volume)</td><td>Dense, hard, compact sediment (low volume)</td></tr>
+<tr><td><strong>Supernatant</strong></td><td>Clear supernatant</td><td>Turbid supernatant</td></tr>
+<tr><td><strong>Bridging</strong></td><td>Flocs form a continuous network that may bridge the bottom to the surface</td><td>No bridging</td></tr>
+<tr><td><strong>Redispersibility</strong></td><td>Easy to redisperse by gentle shaking</td><td>Difficult to redisperse; forms hard cake</td></tr>
+<tr><td><strong>Pourability</strong></td><td>Good; pours easily due to flocc structure</td><td>Poor; may be too fluid or form clumps</td></tr>
+<tr><td><strong>Viscosity</strong></td><td>Higher apparent viscosity at low shear</td><td>Lower viscosity at low shear</td></tr>
+<tr><td><strong>Stability Preference</strong></td><td>Physically preferred in pharmaceutical suspensions (easy redispersibility)</td><td>Not preferred (hard cake formation)</td></tr>
+<tr><td><strong>Example</strong></td><td>Suspension with electrolyte or flocculating agent added</td><td>Suspension with strong deflocculating agent (e.g., high conc. of surfactant)</td></tr>
+</table>
+
+<div class="highlight-box">
+<strong>Pharmaceutical Preference:</strong> Flocculated suspensions are <strong>preferred</strong> in pharmacy because even though they settle faster, the sediment is loose and easily redispersed. Deflocculated suspensions form hard cakes that are clinically unacceptable.
+</div>
+
+<div class="sub-label">(c) Surfactant &amp; HLB Calculation Formulas [05 Marks]</div>
+
+<h4>Definition of Surfactant:</h4>
+<p>A <strong>surfactant (Surface Active Agent)</strong> is a substance that, when present at low concentration in a system, <strong>adsorbs at the interface between two immiscible phases</strong> (liquid-liquid, liquid-gas, or liquid-solid) and reduces the interfacial/surface tension. Surfactants possess both <strong>hydrophilic</strong> (water-loving) and <strong>lipophilic</strong> (oil-loving) regions in the same molecule (amphiphilic nature).</p>
+
+<h4>HLB (Hydrophilic-Lipophilic Balance):</h4>
+<p><strong>Definition:</strong> HLB is a semi-empirical scale (developed by Griffin, 1949) that indicates the relative tendency of a surfactant to be hydrophilic or lipophilic. It ranges from 0 to 40 (typically 0&ndash;20 for most surfactants).</p>
+
+<p><strong>HLB Scale:</strong></p>
+<ul>
+<li>HLB 0&ndash;3: Antifoaming agents</li>
+<li>HLB 3&ndash;6: W/O emulsifiers</li>
+<li>HLB 7&ndash;9: Wetting agents</li>
+<li>HLB 8&ndash;16: O/W emulsifiers</li>
+<li>HLB 13&ndash;15: Detergents</li>
+<li>HLB 15&ndash;18: Solubilizing agents</li>
+</ul>
+
+<h4>Formulas for HLB Calculation:</h4>
+
+<p><strong>1. Griffin's Method &ndash; For Non-Ionic Surfactants (fatty acid esters):</strong></p>
+<div class="eq-block"><strong>HLB = 20 &times; (M<sub>w</sub> of hydrophilic portion) / (Molecular weight of surfactant)</strong></div>
+<div class="eq-block">HLB = 20 &times; M<sub>H</sub> / M</div>
+
+<p><strong>2. Griffin's Method &ndash; For Fatty Alcohol Ethoxylates (AEOn):</strong></p>
+<div class="eq-block"><strong>HLB = (E% + P%) / 5</strong></div>
+<p>Where: E% = weight % of ethylene oxide, P% = weight % of polyhydric alcohol (glycerol, sorbitol) group.</p>
+<p>If only ethylene oxide is present: HLB = E% / 5</p>
+
+<p><strong>3. Davies' Method &ndash; For All Surfactants (Group Number Method):</strong></p>
+<div class="eq-block"><strong>HLB = 7 + &Sigma;(Hydrophilic group numbers) &minus; &Sigma;(Lipophilic group numbers)</strong></div>
+
+<p><strong>Davies' Group Numbers:</strong></p>
+<table>
+<tr><th>Hydrophilic Groups</th><th>Group Number</th></tr>
+<tr><td>&minus;SO<sub>4</sub>Na</td><td>+38.7</td></tr>
+<tr><td>&minus;COO&minus;Na</td><td>+21.1</td></tr>
+<tr><td>&minus;SO<sub>3</sub>Na</td><td>+11.0</td></tr>
+<tr><td>N (tertiary amine)</td><td>+9.4</td></tr>
+<tr><td>Ester (sorbitan)</td><td>+6.8</td></tr>
+<tr><td>&minus;COOH</td><td>+2.1</td></tr>
+<tr><td>&minus;OH (free)</td><td>+1.9</td></tr>
+<tr><td>&minus;O&minus; (ether linkage)</td><td>+1.3</td></tr>
+<tr><td>CH<sub>2</sub>CH<sub>2</sub>O&minus; (each unit)</td><td>+0.33</td></tr>
+</table>
+<table>
+<tr><th>Lipophilic Groups</th><th>Group Number</th></tr>
+<tr><td>&minus;CH<sub>2</sub>&minus;, &minus;CH<sub>3</sub>&minus; (each)</td><td>&minus;0.475</td></tr>
+<tr><td>Derived phenyl group</td><td>&minus;1.662</td></tr>
+</table>
+
+<p><strong>4. HLB of Blend of Surfactants:</strong></p>
+<div class="eq-block"><strong>HLB<sub>blend</sub> = (f<sub>1</sub> &times; HLB<sub>1</sub>) + (f<sub>2</sub> &times; HLB<sub>2</sub>) + ...</strong></div>
+<p>Where f<sub>1</sub>, f<sub>2</sub> = weight fractions of individual surfactants.</p>
+
+<div class="exam-tip">
+<strong>&#128161; Exam Tip:</strong> Most commonly asked: Griffin's formula for esters (HLB = 20 &times; M<sub>H</sub>/M) and Davies' group number method. For blend calculation, always remember to use weight fractions (not percentages directly).
+</div>
+
+</div></div>
+</div>
+
+<!-- Q7 -->
+<div class="q-card" id="q7" data-search="suspension interfacial properties identification test emulsion accelerated stability testing">
+<div class="q-header" onclick="toggleCard(this)">
+<span class="q-num">Q.7</span>
+<span class="q-title">Suspension &amp; Interfacial Properties | Emulsion Identification Tests | Accelerated Stability</span>
+<span class="q-marks">16 Marks</span>
+<span class="q-arrow">&#9660;</span>
+</div>
+<div class="q-body"><div class="q-content" id="ans-q7">
+
+<div class="sub-label">(a) Suspension &amp; Interfacial Properties of Suspended Particles [06 Marks]</div>
+
+<h4>Definition of Suspension:</h4>
+<p>A <strong>suspension</strong> is a coarse dispersion of insoluble or sparingly soluble solid particles (typically 0.5&ndash;5 &mu;m) in a liquid medium (usually aqueous), intended for oral, topical, or parenteral administration. The solid particles do not dissolve but remain suspended by physical or chemical means.</p>
+
+<h4>Interfacial Properties of Suspended Particles:</h4>
+
+<p><strong>1. Surface Free Energy (Interfacial Tension):</strong></p>
+<ul>
+<li>When a solid particle is dispersed in a liquid, a solid-liquid interface is created.</li>
+<li>The <strong>interfacial tension</strong> at this interface determines the degree of wetting.</li>
+<li>High interfacial tension &rarr; poor wetting &rarr; particles tend to aggregate and float (hydrophobic particles).</li>
+<li>Lowering interfacial tension (by wetting agents) improves dispersion.</li>
+</ul>
+
+<p><strong>2. Wetting:</strong></p>
+<ul>
+<li>Wetting is the displacement of air from the solid surface by the liquid.</li>
+<li><strong>Contact angle (&theta;)</strong> is the angle between the solid surface and the tangent to the liquid droplet at the point of contact.</li>
+<li>&theta; &lt; 90&deg; = Good wetting (hydrophilic surface); &theta; &gt; 90&deg; = Poor wetting (hydrophobic surface).</li>
+<li><strong>Wetting agents</strong> (surfactants like polysorbate 80, SLS) reduce contact angle by adsorbing at the solid-liquid interface.</li>
+</ul>
+
+<div class="ascii-diagram">
+   Good Wetting (&theta; &lt; 90&deg;)    Poor Wetting (&theta; &gt; 90&deg;)
+   
+        Liquid                         Liquid
+      ╱&theta;      ╲                   &theta;╲
+     ╱    __        ╲                 ╱      ╲
+    ╱    /  ╲        ╲               ╱   ___   ╲
+   ╱____/    ╲________╲             ╱___/   ╲___╲
+   ══════════════════════           ════════════════════
+         Solid                           Solid
+   
+   Spread droplet                   Beaded droplet
+</div>
+
+<p><strong>3. Electric Double Layer (Zeta Potential):</strong></p>
+<ul>
+<li>Particles in suspension acquire a surface charge (from ionization, ion adsorption, or lattice defects).</li>
+<li>This charge attracts counterions from the medium, forming an <strong>electric double layer</strong> (Stern layer + diffuse layer).</li>
+<li>The <strong>zeta potential</strong> (potential at the slipping plane) determines electrostatic repulsion between particles.</li>
+<li>High |zeta potential| (&gt; &plusmn;30 mV) &rarr; deflocculated (stable against aggregation but may form hard cake).</li>
+<li>Low |zeta potential| (&lt; &plusmn;20 mV) &rarr; flocculated (aggregates form but easily redispersible).</li>
+</ul>
+
+<p><strong>4. Adsorption at Interface:</strong></p>
+<ul>
+<li>Surfactants, polymers, and ions adsorb at the solid-liquid interface, modifying surface properties.</li>
+<li>Adsorbed layers can provide steric stabilization (polymers like PVP, HPMC) or electrostatic stabilization (ionic surfactants).</li>
+</ul>
+
+<p><strong>5. Solid-Liquid Interfacial Phenomena in Practice:</strong></p>
+<ul>
+<li><strong>Floating tendency:</strong> Hydrophobic particles entrapped air bubbles &rarr; float to surface. Wetting agents solve this.</li>
+<li><strong>Particle-particle adhesion:</strong> Due to van der Waals forces at contact points, enhanced by capillary forces from adsorbed moisture films.</li>
+<li><strong>Caking:</strong> In deflocculated suspensions, settled particles form a compact mass with strong interparticle bonds, making redispersion difficult.</li>
+</ul>
+
+<div class="sub-label">(b) Identification Tests for Emulsion [05 Marks]</div>
+
+<h4>Tests to Identify O/W and W/O Emulsions:</h4>
+
+<p><strong>1. Dye Solubility Test (Dilution Test):</strong></p>
+<ul>
+<li>Add a water-soluble dye (e.g., amaranth, methylene blue) to the emulsion.</li>
+<li>If the dye disperses throughout &rarr; <strong>O/W emulsion</strong> (water is continuous phase).</li>
+<li>If the dye remains as discrete droplets &rarr; <strong>W/O emulsion</strong> (water is dispersed phase).</li>
+<li>Alternatively, use an oil-soluble dye (Sudan III, Oil Red O): disperses throughout in W/O, remains as droplets in O/W.</li>
+</ul>
+
+<p><strong>2. Electrical Conductivity Test:</strong></p>
+<ul>
+<li>Insert electrodes connected to a conductivity meter/bulb into the emulsion.</li>
+<li>High conductivity (bulb glows) &rarr; <strong>O/W emulsion</strong> (water is continuous and conducts electricity).</li>
+<li>Low/no conductivity (bulb does not glow) &rarr; <strong>W/O emulsion</strong> (oil is continuous and non-conductive).</li>
+</ul>
+
+<p><strong>3. Filter Paper Test:</strong></p>
+<ul>
+<li>Place a drop of emulsion on a piece of filter paper.</li>
+<li>If the drop spreads quickly &rarr; <strong>O/W emulsion</strong> (external water phase is absorbed by the hydrophilic filter paper).</li>
+<li>If the drop does not spread &rarr; <strong>W/O emulsion</strong> (external oil phase is not absorbed).</li>
+</ul>
+
+<p><strong>4. Cobalt Chloride Test:</strong></p>
+<ul>
+<li>Place a drop of emulsion on cobalt chloride-impregnated filter paper (blue when dry, pink when wet).</li>
+<li>If the paper turns pink &rarr; <strong>O/W emulsion</strong> (water in continuous phase reaches the paper).</li>
+<li>If the paper remains blue &rarr; <strong>W/O emulsion</strong>.</li>
+</ul>
+
+<p><strong>5. Fluorescence Test:</strong></p>
+<ul>
+<li>Examine the emulsion under UV light.</li>
+<li>Many oils exhibit fluorescence. If the entire field fluoresces &rarr; <strong>W/O</strong>; if only discrete droplets fluoresce &rarr; <strong>O/W</strong>.</li>
+</ul>
+
+<p><strong>6. Dilution Test:</strong></p>
+<ul>
+<li>Try to dilute the emulsion with water. If it mixes freely &rarr; <strong>O/W</strong>. If it separates &rarr; <strong>W/O</strong>.</li>
+<li>Try to dilute with oil. If it mixes freely &rarr; <strong>W/O</strong>. If it separates &rarr; <strong>O/W</strong>.</li>
+</ul>
+
+<div class="exam-tip">
+<strong>&#128161; Exam Tip:</strong> Dye test, conductivity test, and filter paper test are the three most important. Always write the expected result for both O/W and W/O types for each test.
+</div>
+
+<div class="sub-label">(c) Accelerated Stability Testing in Expiration Dating [05 Marks]</div>
+
+<h4>Definition:</h4>
+<p><strong>Accelerated stability testing</strong> involves subjecting the pharmaceutical product to <strong>elevated stress conditions</strong> (temperature, humidity, light) for a shorter duration to predict its shelf life under normal storage conditions. It is based on the <strong>Arrhenius equation</strong>, which relates reaction rate to temperature.</p>
+
+<h4>Principle &ndash; Arrhenius Equation:</h4>
+<div class="eq-block">k = A &times; e<sup>&minus;E<sub>a</sub>/RT</sup></div>
+<p>In linearized form:</p>
+<div class="eq-block"><strong>ln k = ln A &minus; E<sub>a</sub>/(RT)</strong></div>
+<div class="eq-block"><strong>log k = log A &minus; E<sub>a</sub>/(2.303RT)</strong></div>
+
+<p>Where:</p>
+<ul>
+<li>k = rate constant at temperature T</li>
+<li>A = frequency factor (pre-exponential factor)</li>
+<li>E<sub>a</sub> = activation energy (J/mol or cal/mol)</li>
+<li>R = gas constant (8.314 J/mol&middot;K)</li>
+<li>T = absolute temperature (K)</li>
+</ul>
+
+<h4>Procedure:</h4>
+<ol>
+<li><strong>Sample Preparation:</strong> Prepare multiple samples of the dosage form in their final packaging.</li>
+<li><strong>Storage Conditions:</strong> Store at elevated temperatures (e.g., 40&deg;C, 50&deg;C, 60&deg;C, 70&deg;C) with controlled humidity (e.g., 75% RH).</li>
+<li><strong>ICH Guidelines for Storage Conditions:</strong></li>
+</ol>
+<table>
+<tr><th>Study</th><th>Temperature</th><th>Humidity</th><th>Duration</th></tr>
+<tr><td>Long term</td><td>25&deg;C &plusmn; 2&deg;C</td><td>60% RH &plusmn; 5%</td><td>12 months</td></tr>
+<tr><td>Intermediate</td><td>30&deg;C &plusmn; 2&deg;C</td><td>65% RH &plusmn; 5%</td><td>6 months</td></tr>
+<tr><td>Accelerated</td><td>40&deg;C &plusmn; 2&deg;C</td><td>75% RH &plusmn; 5%</td><td>6 months</td></tr>
+</table>
+
+<ol start="4">
+<li><strong>Sampling &amp; Analysis:</strong> Withdraw samples at regular time intervals and assay the drug content.</li>
+<li><strong>Determination of k at each temperature:</strong> Using the appropriate kinetic model (usually first order), calculate k at each temperature.</li>
+<li><strong>Arrhenius Plot:</strong> Plot log k vs 1/T (K<sup>&minus;1</sup>). This gives a straight line.</li>
+</ol>
+<div class="ascii-diagram">
+  log k
+     │        /
+     │       /
+     │      /  &larr; Arrhenius plot
+     │     /    (straight line)
+     │    /
+     │   /
+     │  /
+     │ /
+     │/
+     └──────────────── 1/T (K&supmin;&sup1;)
+     
+  Slope = &minus;E<sub>a</sub> / (2.303R)
+  Intercept = log A
+</div>
+
+<ol start="6">
+<li><strong>Extrapolation:</strong> Extrapolate the line to room temperature (25&deg;C = 298 K) to obtain k<sub>25</sub>.</li>
+<li><strong>Calculation of Shelf Life:</strong> Using k<sub>25</sub>, calculate t<sub>90</sub> (time for 10% degradation):</li>
+</ol>
+<div class="eq-block">t<sub>90</sub> = 0.1054 / k<sub>25</sub> (for first order)</div>
+<div class="eq-block">t<sub>90</sub> = 0.1[A]<sub>0</sub> / k<sub>25</sub> (for zero order)</div>
+
+<h4>Objectives of Accelerated Stability Testing:</h4>
+<ul>
+<li>To predict the shelf life (expiration date) of the product without waiting for real-time data.</li>
+<li>To identify the degradation pathway and products.</li>
+<li>To determine the effect of packaging on stability.</li>
+<li>To establish storage conditions and labeling recommendations.</li>
+<li>To provide regulatory submission data (ICH, FDA, CDSCO guidelines).</li>
+</ul>
+
+<div class="highlight-box">
+<strong>Important Notes:</strong>
+&bull; Accelerated data is used for provisional expiry dates; confirmatory long-term data is still required.
+&bull; The Arrhenius equation is valid only when the <strong>degradation mechanism remains the same</strong> at all temperatures.
+&bull; Products showing phase changes (melting, crystallization) at elevated temperatures cannot be reliably predicted by Arrhenius.
+</div>
+
+<div class="revision-note">
+<strong>&#128218; Short Revision Note:</strong> Accelerated stability = elevated T &rarr; faster degradation &rarr; Arrhenius plot (log k vs 1/T) &rarr; extrapolate to 25&deg;C &rarr; get k<sub>25</sub> &rarr; calculate t<sub>90</sub> = 0.105/k<sub>25</sub>. ICH conditions: 40&deg;C/75%RH for 6 months for accelerated study.
+</div>
+
+</div></div>
+</div>
+
+</div>
+
+<script>
+(function(){
+// Toggle cards
+function toggleCard(header){
+var card=header.parentElement;
+card.classList.toggle('open');
+}
+window.toggleCard=toggleCard;
+
+// Dark mode
+var dm=document.getElementById('darkToggle');
+var isDark=false;
+dm.addEventListener('click',function(){
+isDark=!isDark;
+document.body.classList.toggle('dark',isDark);
+dm.innerHTML=isDark?'&#9788;':'&#9790;';
+});
+
+// Search
+var si=document.getElementById('searchInput');
+var cards=document.querySelectorAll('.q-card');
+var nr=document.getElementById('noResults');
+si.addEventListener('input',function(){
+var q=si.value.toLowerCase().trim();
+var found=0;
+cards.forEach(function(c){
+var text=c.textContent.toLowerCase();
+var match=!q||text.indexOf(q)>-1;
+c.style.display=match?'':'none';
+if(match)found++;
+});
+nr.style.display=found?'none':'block';
+});
+
+// Expand/Collapse all
+var ea=document.getElementById('expandAll');
+var allExpanded=false;
+ea.addEventListener('click',function(){
+allExpanded=!allExpanded;
+cards.forEach(function(c){
+if(c.style.display!=='none'){
+c.classList.toggle('open',allExpanded);
+}
+});
+ea.textContent=allExpanded?'Collapse All':'Expand All';
+});
+
+// Copy button functionality
+var contents=document.querySelectorAll('.q-content');
+contents.forEach(function(cnt){
+var btn=document.createElement('button');
+btn.className='copy-btn';
+btn.textContent='\uD83D\uDCCB Copy Answer';
+btn.addEventListener('click',function(e){
+e.stopPropagation();
+var text=cnt.innerText;
+navigator.clipboard.writeText(text).then(function(){
+btn.textContent='\u2713 Copied!';
+btn.classList.add('copied');
+setTimeout(function(){
+btn.textContent='\uD83D\uDCCB Copy Answer';
+btn.classList.remove('copied');
+},2000);
+}).catch(function(){
+// Fallback
+var ta=document.createElement('textarea');
+ta.value=cnt.innerText;
+document.body.appendChild(ta);
+ta.select();
+document.execCommand('copy');
+document.body.removeChild(ta);
+btn.textContent='\u2713 Copied!';
+btn.classList.add('copied');
+setTimeout(function(){
+btn.textContent='\uD83D\uDCCB Copy Answer';
+btn.classList.remove('copied');
+},2000);
+});
+});
+cnt.appendChild(btn);
+});
+
+// Active nav link on scroll
+var links=document.querySelectorAll('#navLinks a');
+var sectionEls=[];
+cards.forEach(function(c){
+sectionEls.push(c);
+});
+window.addEventListener('scroll',function(){
+var scrollY=window.scrollY+120;
+var current='';
+sectionEls.forEach(function(s){
+if(s.offsetTop<=scrollY){
+current=s.id;
+}
+});
+links.forEach(function(l){
+l.classList.remove('active');
+if(l.getAttribute('data-q')===current){
+l.classList.add('active');
+}
+});
+});
+
+// Open all cards initially for first view
+// (first card already has 'open' class in HTML)
+})();
+</script>
+
+
+
+<a href="https://buntykakabhavnagari.github.io/website5/" 
+   target="_blank"
+   style="
+     text-decoration:none;
+     padding:14px 28px;
+     background:#111;
+     color:#fff;
+     border-radius:8px;
+     font-size:16px;
+     transition:all 0.3s ease;
+     box-shadow:0 4px 10px rgba(0,0,0,0.1);
+     display:inline-block;
+   "
+   onmouseover="this.style.background='#333'; this.style.transform='translateY(-2px)'"
+   onmouseout="this.style.background='#111'; this.style.transform='translateY(0)'"
+>
+  Go to Website 🚀
+</a>
+
+    
 </body>
 </html>
